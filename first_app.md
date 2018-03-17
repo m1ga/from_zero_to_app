@@ -3,7 +3,7 @@
 ## First app
 
 In this tutorial we will create a first `Hello World` app with Axway Appcelerator.
-We will use the command line tools or Atom and not [Appcelerator Studio](https://platform.appcelerator.com/) to create and compile our projects.
+We will use the command line tools in combination with Atom and not [Appcelerator Studio](https://platform.appcelerator.com/) to create and compile our projects. But all the code is working with Appcelerator Studio and other IDEs, too!
 
 ## Project setup
 To create a new project (a so called Alloy project) we run the following command:
