@@ -199,7 +199,10 @@ All windows are setup now and we need to write the code to open the second windo
 In the XML you can add `onClick="clickFunction"` to the `<Button>`. In the controller you do this with:
 ```javascript
 $.btn1.addEventListener("click", clickFunction);
-// Both will call the function clickFunction when you click it. Inside that function we open the second controller:
+```
+
+Both will call the function clickFunction when you click it. Inside that function we open the second controller:
+```javascript
 function clickFunction(e) {
 	var win2 = Alloy.createController("/secondWindow").getView();
 	win2.open();
