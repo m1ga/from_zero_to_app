@@ -14,6 +14,8 @@ _Video tutorials are planed, too!_
 ## Requirements
 At the time this tutorial was written the current version of the needed tools are:
 
+| Tool | Version |
+| --- | --- |
 | JDK | 1.8.0 (JDK 8) |
 | NodeJS | 8.10.0 LTS |
 | Titanium SDK | 7.1.0.GA |

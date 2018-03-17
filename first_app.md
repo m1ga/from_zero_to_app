@@ -23,6 +23,8 @@ inside the root folder of your project and it will compile, install and run the 
 A new project already contains a demo project and all necessary folders to create the first app. Your project looks like this at the beginning:
 ![folder structure](images/app_structure.png)
 
+| Folder | Description |
+| --- | --- |
 | / | In this folder is the main configuration file "tiapp.xml". It contains basic information about your app. Also the iOS app icons are in this folder |
 | /app | Here are all files you’ve created and you will work with|
 | /app/assets/ | All your external data like images, videos, pdf, fonts,… will go into this folder. |
