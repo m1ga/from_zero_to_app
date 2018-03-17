@@ -21,6 +21,7 @@ inside the root folder of your project and it will compile, install and run the 
 
 ## Folder structure
 A new project already contains a demo project and all necessary folders to create the first app. Your project looks like this at the beginning:
+
 ![folder structure](images/app_structure.png)
 
 | Folder | Description |
@@ -46,7 +47,7 @@ The XML files inside the /views folder contain the components that are visible o
 ```xml
 <Alloy>
 	<Window class="container">
-			<Label id="label" onClick="doClick">Hello, World</Label>
+		<Label id="label" onClick="doClick">Hello, World</Label>
 	</Window>
 </Alloy>
 ```
@@ -100,9 +101,9 @@ XML way
 Open the index.xml and add a `<Window>`, `<ImageView>` and a `<Button>` to this file. Give the last two elements an unique ID since we want to style them:
 ```xml
 <Alloy>
-		<Window>
-			<ImageView id="img1"/>
-			<Button id="btn1" title="open window"/>
+	<Window>
+		<ImageView id="img1"/>
+		<Button id="btn1" title="open window"/>
 	</Window>
 </Alloy>
 ```
@@ -162,11 +163,11 @@ Open the secondWindow view and add a `<Window>`, `<Label>`, `<TextField>` and `<
 ```xml
 <Alloy>
 	<Window>
-			<View id="view_content">
-				<Label id="lbl" text="Add some text:"/>
-				<TextField id="tf"/>
-				<Button title="close" id="btn"/>
-			</View>
+		<View id="view_content">
+			<Label id="lbl" text="Add some text:"/>
+			<TextField id="tf"/>
+			<Button title="close" id="btn"/>
+		</View>
 	</Window>
 </Alloy>
 ```
