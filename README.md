@@ -4,7 +4,7 @@
 
 ## Tutorials 
 * [Installation](https://github.com/m1ga/titanium_with_atom)
-* [First app](https://github.com/m1ga/from_zero_to_app/blob/master/first_app.md)
+* [First app](./first_app.md)
 * Ready for the store? [_coming soon_]
 * Use the camera [_coming soon_]
 * Implement a map [_coming soon_]
