@@ -11,7 +11,7 @@ We will start with an empty Alloy project.
 ```bash
 appc new
 ```
-Have a look at the last section of the [first tutorial](./first_app.md#create-a-new--clean-project).
+Have a look at the last section of the [first tutorial](./first_app.md#create-a-new---clean-project).
 
 ## Add the Map module
 
