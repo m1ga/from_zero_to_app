@@ -220,6 +220,23 @@ $.btn.addEventListener("click", clickClose);
 ```
 Run the app again and you can click the "open Window" button to open the second window and the "close" button to close it again.
 
+That's it for the short introduction.
+
+## Create a new - clean project
+
+When you create a new project the default template will already add some code to the project. The following steps can be used to create a blank project:
+1. `appc new`
+2. open `tiapp.xml` and
+  1. remove all `<property>` lines with `name=acs-*`, `appc-org-id` and `appc-creator-user-id` (if you don't want to use the Appcelerator Cloud). You need to keep the `appc-app-id`!
+  2. set ` <analytics>` to `false` (if you don't want to use Appcelerator Analytics)
+  3. remove `<module platform="commonjs">ti.cloud</module>`
+3. open `app/alloy.js` and remove everything
+4. remove the `doClick()` function from `app/controllers/index.js`
+5. remove the `<Label>` row from `app/views/index.xml`
+6. remove everything from `app/styles/index.tss`
+
+Now you have a empty project! If you want to you can adjust the default templates to your defaults. Search for the `node_modules/alloy/templates/default` folder. E.g. on Linux it is located at `~/.appcelerator/install/7.0.2/package/node_modules/alloy/templates/default`.
+
 ## Where to go from here
 You have your first functional app that uses some of the basic structure of Appcelerator Titanium. Have a look at the [KitchenSink source code](https://github.com/appcelerator/kitchensink-v2/) and the [official API documentation ](http://docs.appcelerator.com/platform/latest/#!/api) which other elements you can use. All the UI elements have examples on how to use them inside the documentation. Play around with different components and combine them to match your app layout. 
 There is also a growing community at http://tislack.org/ you can join to ask questions, show your apps, report bugs or search for jobs! And if you want to dig even deeper you can have a look at the [source code of Titanium](https://github.com/appcelerator/titanium_mobile) and add features if you miss something. 

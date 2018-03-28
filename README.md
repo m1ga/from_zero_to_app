@@ -3,11 +3,11 @@
 `From zero to app` will be a series of basic tutorials for Axway Appcelerator to create your first mobile app for Android and iOS using the power of Javascript. You just need some basic Javscript knowledge and a Linux, Windows or Mac (for iOS development). The tutorials will guide you from zero to your first app! 
 
 ## Tutorials 
-* [Installation](https://github.com/m1ga/titanium_with_atom)
-* [First app](./first_app.md)
+* [Installation](https://github.com/m1ga/titanium_with_atom) - How to install Axway Appcelerator
+* [First app](./first_app.md) - Your first app!
+* [Map project](./map_project.md) - Add a map with pins to your app.
 * Ready for the store? [_coming soon_]
 * Use the camera [_coming soon_]
-* Implement a map [_coming soon_]
 
 _Video tutorials are planed, too!_
 
@@ -25,6 +25,9 @@ At the time this tutorial was written the current version of the needed tools ar
 
 It will be updated and tested with future version. If you find anything that is not working anymore please file an issue.
 
-Author
----------------
+
+## Feedback
+If you have any question or comments feel free to add an `issue` or contact me ([twitter](https://twitter.com/MichaelGangolf), [mail](miga@migaweb.de), [Ti-Slack](http://tislack.org/)).
+
+## Author
 - Michael Gangolf ([@MichaelGangolf](https://twitter.com/MichaelGangolf) / [Web](http://migaweb.de))
