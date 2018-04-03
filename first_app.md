@@ -31,7 +31,7 @@ A new project already contains a demo project and all necessary folders to creat
 | /app/assets/ | All your external data like images, videos, pdf, fonts,… will go into this folder. |
 | /app/assets/images | Create this folder when you work with images. You can reference them later with "/images/image.jpg" |
 | /app/assets/android | The Android app icon and the splashscreen are inside this folder. Also density related folders. |
-| /app/controllers | Contains all your code files (Javascript files) |
+| /app/controllers | Contains all your code files (JavaScript files) |
 | /app/models | Models: database structure files |
 | /app/styles | TSS styling files (like CSS for Webpages) |
 | /app/views | XML files of your views |
@@ -83,7 +83,7 @@ Each tss file contains styles that are connected to the view with the same name.
 inside app.tss to make all Windows have white backgrounds.
 
 ### Controllers / JS files
-The controller/ folder contains normal Javascript files. The demo index.js contains the onClick function from the index.xml and a call to open the window
+The controller/ folder contains normal JavaScript files. The demo index.js contains the onClick function from the index.xml and a call to open the window
 ```javascript
 function doClick(e) {
 	alert($.label.text);
