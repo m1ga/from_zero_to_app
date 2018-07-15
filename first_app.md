@@ -1,4 +1,4 @@
-# From zero to app
+# [From zero to app](https://github.com/m1ga/from_zero_to_app)
 
 ## First app
 
