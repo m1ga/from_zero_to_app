@@ -17,11 +17,11 @@ At the time this tutorial was written the current version of the needed tools ar
 | Tool | Version |
 | --- | --- |
 | JDK | 1.8.0 (JDK 8) |
-| NodeJS | 8.10.0 LTS |
-| Titanium SDK | 7.1.0.GA |
-| Appcelerator CLI | 7.0.2 |
-| Titanium CLI |5.0.14 |
-| Alloy | 1.11.0 |
+| NodeJS | 8.12.0 LTS |
+| Titanium SDK | 7.4.0.GA |
+| Appcelerator CLI | 7.0.6 |
+| Titanium CLI |5.2.0 |  
+| Alloy | 1.13.1 |
 
 It will be updated and tested with future version. If you find anything that is not working anymore please file an issue.
 
