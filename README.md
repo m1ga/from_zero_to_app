@@ -17,14 +17,15 @@ At the time this tutorial was written the current version of the needed tools ar
 | Tool | Version |
 | --- | --- |
 | JDK | 1.8.0 (JDK 8) |
-| NodeJS | 8.12.0 LTS |
-| Titanium SDK | 7.4.0.GA |
-| Appcelerator CLI | 7.0.6 |
+| NodeJS | 8.12.0 (v10.12.0 LTS will be supported with 7.5.x, 7.4.x can be patched[1]) |
+| Titanium SDK | 7.4.1.GA |
+| Appcelerator CLI | 7.0.7 |
 | Titanium CLI |5.2.0 |  
-| Alloy | 1.13.1 |
+| Alloy | 1.13.3 |
 
 It will be updated and tested with future version. If you find anything that is not working anymore please file an issue.
 
+[1] NodeJS: open `.titanium/mobilesdk/linux/7.4.1.GA/android/cli/hooks/aar-transform.js`, find `.exists()` and change it to `.existsSync()`
 
 ## Feedback
 If you have any question or comments feel free to add an `issue` or contact me ([twitter](https://twitter.com/MichaelGangolf), [mail](miga@migaweb.de), [Ti-Slack](http://tislack.org/)).
