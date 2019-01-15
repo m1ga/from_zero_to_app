@@ -100,4 +100,4 @@ function onLocation(e){
 
 ### Documentation
 
-More information and properties can be fund in the official documentation at https://docs.appcelerator.com/platform/latest/#!/api/Titanium.Geolocation
+More information and properties can be found in the official documentation at https://docs.appcelerator.com/platform/latest/#!/api/Titanium.Geolocation
