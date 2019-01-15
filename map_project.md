@@ -1,13 +1,12 @@
 # [From zero to app](https://github.com/m1ga/from_zero_to_app)
-
 ## Map project
 ![app with map](images/map_intro.png)
 
-A feature that many apps have in common is a map with annotations. This tutorial will create a basic app with a map and annotations. 
+A feature that many apps have in common is a map with annotations. This tutorial will create a basic app with a map and annotations.
 
 ## Project setup
 
-We will start with an empty Alloy project. 
+We will start with an empty Alloy project.
 ```bash
 appc new
 ```
