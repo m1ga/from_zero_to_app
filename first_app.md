@@ -32,9 +32,11 @@ A new project already contains a demo project and all necessary folders to creat
 | /app/assets/images | Create this folder when you work with images. You can reference them later with "/images/image.jpg" |
 | /app/assets/android | The Android app icon and the splashscreen are inside this folder. Also density related folders. |
 | /app/controllers | Contains all your code files (JavaScript files) |
+| /app/platform | Contains platform related folders/files/themes (not a default folder) |
 | /app/models | Models: database structure files |
 | /app/styles | TSS styling files (like CSS for Webpages) |
 | /app/views | XML files of your views |
+| /platform | system folder |
 | /plugins | system folder |
 | /resources | system folder |
 | /build | When you compile your app this folder will appear. It contains building related files |
