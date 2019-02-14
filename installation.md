@@ -336,6 +336,8 @@ It allows you to quickly test your app on multiple devices at the same time and 
 
 ### Liveview
 
+**Note:** As of SDK 8.0.0 Liveview is now part of the SDK, it is not recommended or supported to install Liveview via npm as this will conflict with the SDK version.
+
 Liveview is available as a npm package now.
 
 * `npm install -g liveview`
