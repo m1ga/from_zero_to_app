@@ -7,8 +7,8 @@
 * **[First app](./first_app.md)** - Your first app!
 * **[Map project](./map_project.md)** - Add a map with pins to your app.
 * **[Use the camera](./camera.md)** - Record pictures and videos in your app.
-* **[Ah, push it](./push.md)** - Extend you app with Firebase push notifications (work in progress)
-* **[Where am I?](./geolocation.md)** - Use geolocation services in your app. (soon)
+* **[Ah, push it](./push.md)** - Extend you app with Firebase push notifications
+* **[Where am I?](./geolocation.md)** - Use geolocation services in your app.
 * Ready for the store? [_coming soon_]
 
 _Video tutorials are planed, too!_

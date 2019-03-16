@@ -2,7 +2,11 @@
 
 ## Where am I?
 
-Use geolocation services in your app
+If you want to create a location based app you need to know the GPS position of the user. In order to get them we can use the  geolocation services of your phone. Since this is sensible data we need to ask the user for permission.
+
+<img src="images/geo_permission.png"/>
+
+You add those permission into tiapp xml and request them at runtime using Ti APIs.
 
 ### XML setup
 
@@ -67,15 +71,22 @@ function getGeoPermission(clb) {
 	});
 }
 
-
 getGeoPermission(function(){
-	// callback function
+	// callback function - inside here we will have GPS permissions
 })
 ```
 
-### Register location events
+Now the app is able to use the GPS functions and we can add a listener to get the location.
+
+### Location event
+
+Especially on Android it can a bit until you have a GPS fix and get the position. Also if you want to track the user while he is moving you will need a eventlistener. The `location` event will fire when the location is available or changes:
+
 
 ```javascript
+
+// add this into the getGeoPermission() callback:
+
 Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_HIGH;
 if (Ti.Geolocation.locationServicesEnabled) {
 	if (OS_ANDROID) {
@@ -88,12 +99,40 @@ if (Ti.Geolocation.locationServicesEnabled) {
 		Ti.Geolocation.pauseLocationUpdateAutomatically = true;
 		Ti.Geolocation.activityType = Ti.Geolocation.ACTIVITYTYPE_FITNESS;
 	}
+	// add location listener
 	Ti.Geolocation.addEventListener('location', onLocation);
-	Titanium.Geolocation.getCurrentPosition(onLocation);
+
+	// try to get the current location (might be an old chacked one or empty)
+	Ti.Geolocation.getCurrentPosition(onLocation);
 }
 
-function onLocation(e){
-	Ti.API.info("location: " + JSON.stringify(e));
+function onLocation(returnObject){
+	// will fire when the location updates
+	Ti.API.info("location: " + JSON.stringify(returnObject));
+}
+```
+
+The `returnObject` of the `location` event contains a `coords` node with `latitude` and `longitude` and other useful information like a `timestamp` or the `accuracy`
+
+```
+var errorCode = returnObject.error;
+var lat = returnObject.coords.latitude;
+var lon = returnObject.coords.longitude;
+```
+
+### Heading event
+
+The `Ti.Gelocation` features another useful event for geo based apps: `heading`. With this you will get the direction your phone is heading to.
+
+```javascript
+Ti.Geolocation.addEventListener('heading', onHeading);
+
+function onHeading(returnObject){
+	// 
+	console.log(returnObject.heading.magneticHeading);
+	console.log(returnObject.heading.x);
+	console.log(returnObject.heading.y);
+	console.log(returnObject.heading.z);
 }
 ```
 
