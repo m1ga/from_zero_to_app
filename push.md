@@ -1,5 +1,3 @@
-# Work in progress 
-
 # [From zero to app](https://github.com/m1ga/from_zero_to_app)
 
 ## Ah, push it
@@ -38,7 +36,7 @@ Go to <https://console.firebase.google.com/> and create a project.
 -   download the config file: <br/>![create5](images/push_create5.png)
 
 -   place it here:
--   iOS: place `GoogleService-Info.plist` into `app/assets/iphone`
+-   iOS: place `GoogleService-Info.plist` into `app/assets/iphone/`
 -   Android: place `google-services.json` into `/app/assets/android/`
 
 ## XML setup
@@ -47,7 +45,7 @@ Download the modules and update your `tiapp.xml`:
 
 ```xml
 <modules>
-	<module platform="android">ti.playservices</module>
+	<module platform="android" version="11.0.40">ti.playservices</module>
 	<module>firebase.core</module>
 	<module>firebase.cloudmessaging</module>
 </modules>
@@ -56,6 +54,7 @@ Download the modules and update your `tiapp.xml`:
 ```xml
 <property name="ti.android.bug2373.finishfalseroot" type="bool">true</property>
 ```
+(not needed for SDK >= 8.0.0)
 
 ## Code setup
 
@@ -78,12 +77,15 @@ if (OS_IOS) {
 
 		// Register for push notifications
 		Ti.Network.registerForPushNotifications({
-			success: function() { ...
+			success: function() {
+				//
 			},
-			error: function() { ...
+			error: function() {
+				//
 			},
-			callback: function() { ...
-			} // Fired for all kind of notifications (foreground, background & closed)
+			callback: function() {
+				// Fired for all kind of notifications (foreground, background & closed)
+			}
 		});
 
 		// Register for Firebase Cloud Messaging
@@ -165,3 +167,52 @@ To get the server ID go back to the Firebase Cloud console:
 
 * go to project settings:<br/>![create6](images/push_create6.png)
 * switch to "Cloud Messaging" and copy the server key:<br/>![create7](images/push_create7.png)
+
+## Notification types
+
+On Android there are two different messages that the phone can process: `Notification messages` and `Data messages`. A `notification message` is processed by the system, the `data message` is handeled by showNotification() in TiFirebaseMessagingService. A 'data message' has more features like an image or custom fields. To use it add a `data` field to your payload.
+
+PHP example:
+```php
+$fields = array (
+	'to' => "DEVICE_TOKEN",
+	'data' => array(
+		"test1" => "value1",
+		"test2" => "value2",
+		"title" => "title",
+		"message" => "message",
+		"big_text"=>"big text even more text big text even more text big text even more text big text even more text",
+		"big_text_summary"=>"big_text_summary",
+		//"icon" => "http://via.placeholder.com/150x150",
+		//"image" => "http://via.placeholder.com/350x150",	// won't show the big_text
+		"force_show_in_foreground"=> true,
+		"color" => "#ff6600",
+		"vibrate" => true,
+		"channelId" => "default"	// or a different channel
+	)
+);
+```
+
+## Advanced topics
+
+### Android: custom sound
+You can place a mp3 file in `/platform/android/res/raw/` in order to play it when the push arrives. To play that sound you need to set it in the notification channel and inside the data part of the push message:
+
+e.g. for `sound.mp3`:
+
+```javascript
+fcm.createNotificationChannel({
+    sound: 'sound'
+});
+```
+```php
+$fields = [
+	'to' => 'DEVICE_TOKEN',
+	'data' => [
+		'key1' => 'value1',
+		'key2' => 'value2'
+		'sound' => 'sound.mp3'
+		]
+];
+
+```
