@@ -39,6 +39,18 @@ Go to <https://console.firebase.google.com/> and create a project.
 -   iOS: place `GoogleService-Info.plist` into `app/assets/iphone/`
 -   Android: place `google-services.json` into `/app/assets/android/`
 
+For iOS we need to upload a p8 file.
+
+- Go to the project settings - Cloud messaging:<br/>![create1](images/push_ios_1.png)
+- Scroll down to the iOS app configurations and click upload (inside the APNs section):<br/>![create1](images/push_ios_2.png)
+- create a APNs file:
+  - go to the Apple provisioning profile center and create a new "Key":<br/>![create1](images/push_ios_5.png)
+  - get the key id for later<br/>![create1](images/push_ios_6.png)
+  - get the team id (link is inside the ? bubble of the upload form below):<br/>![create1](images/push_ios_4.png)
+  - download the file
+- Add your p8 file and fill in the key and team id:<br/>![create1](images/push_ios_3.png)
+
+
 ## XML setup
 
 Download the modules and update your `tiapp.xml`:
