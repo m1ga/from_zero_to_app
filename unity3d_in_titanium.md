@@ -55,18 +55,19 @@ Now you import the exported project into Android Studio to create a library inst
 ## Appcelerator Titanium
 
 * add this to tiapp.xml
-	```xml
-	<android
-	    xmlns:android="http://schemas.android.com/apk/res/android">
-	    <manifest>
-	      <application>
-	        <activity android:name="com.unity.game.UnityPlayerActivity"/>
-	      </application>
-	    </manifest>
-	  </android>
+```xml
+<android
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <manifest>
+      <application>
+        <activity android:name="com.unity.game.UnityPlayerActivity"/>
+      </application>
+    </manifest>
+</android>
 ```
 
-* add this to the controller:
+* add this to the controller
+
 ```javascript
 const unity = require("com.unity.game.UnityPlayerActivity");
 var intent = Ti.Android.createIntent({
