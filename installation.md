@@ -75,7 +75,7 @@ If you do not have node v 8.x already you can up/downgrade with `n`
 ``` bash
 # install npm version 8.x
 npm install -g n
-n 8.12.0
+n lts
 
 ```
 * Install Java JDK 8: http://www.if-not-true-then-false.com/2014/install-oracle-java-8-on-fedora-centos-rhel/
@@ -83,8 +83,9 @@ n 8.12.0
 * Unzip Android SDK and run android to install SDK
 * adjust you .bash_profile:
 ```bash
- PATH = $PATH:$HOME/android-sdk-linux/tools:$HOME/android-sdk-linux/platform-tools:/usr/java/latest/bin
+export PATH=$PATH:$HOME/android-sdk-linux/tools:$HOME/android-sdk-linux/platform-tools:/usr/java/latest/bin
 export ANDROID_SDK=$HOME/android-sdk-linux
+
 export JAVA_HOME=/usr/java/latest # fedora
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-adm64 # ubuntu
 ```
@@ -116,13 +117,13 @@ Unzip and copy it to a folder (e.g. C:\android). Then go into the folder (c:\and
 ```bash
 sdkmanager --update
 sdkmanager "platforms;android-23" "build-tools;23.0.3" "extras;google;m2repository" "extras;android;m2repository"
-sdkmanager "platforms;android-28" "build-tools;25.0.0"
+sdkmanager "platforms;android-28" "build-tools;28.0.3"
 sdkmanager --licenses
 ```
 
 * Android SDK tools
 * Android SDK Platfom-tools
-* Android SDK Build tools (23.0.3, 25.0.0)
+* Android SDK Build tools (23.0.3, 28.0.3)
 * Android 6.0 (API 23) SDK Platform, Android API 28
 * other APIs if you like
 
