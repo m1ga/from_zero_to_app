@@ -117,7 +117,7 @@ Unzip and copy it to a folder (e.g. C:\android). Then go into the folder (c:\and
 ```bash
 sdkmanager --update
 sdkmanager "platforms;android-23" "build-tools;23.0.3" "extras;google;m2repository" "extras;android;m2repository"
-sdkmanager "platforms;android-28" "build-tools;28.0.3"
+sdkmanager "platforms;android-28" "build-tools;28.0.3" "platform-tools"
 sdkmanager --licenses
 ```
 
