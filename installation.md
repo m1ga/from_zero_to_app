@@ -44,7 +44,7 @@ This tutorial will get you started setting up Axway Titanium and use it in combi
 
 ## Installing Appcelerator Titanium
 
-The current GA ('general availability') version of the SDK is 7.4.0.GA while writing this tutorial.
+The current GA ('general availability') version of the SDK is 8.2.0.GA while writing this tutorial.
 
 At first we need to setup Axway Titanium:
 * command line tools (CLI) to compile the apps
@@ -60,20 +60,20 @@ ___
 
 #### Fedora
 
-If you are using Fedora 26/27 you can run the following commands to get the needed libraries:
+If you are using Fedora 26-30 you can run the following commands to get the needed libraries:
 ```bash
 # install tools and libraries
-dnf install nodejs npm git gcc glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686
+sudo dnf install nodejs npm git gcc glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686
 ```
 #### Ubuntu
 ``` bash
 sudo apt-get install nodejs npm git gcc  gcc-multilib openjdk-8-jdk android-tools-adb
 ```
 
-#### For all Distros (if you don't have Node.js v8.x)
-If you do not have node v 8.x already you can up/downgrade with `n`
+#### For all Distros (if you don't have Node.js v10.x)
+If you do not have node v 10.x already you can up/downgrade with `n`
 ``` bash
-# install npm version 8.x
+# install npm version 10.x
 npm install -g n
 n lts
 
@@ -96,11 +96,11 @@ ___
 ### Windows
 
 #### Node.js
-Go to https://nodejs.org/en/download/ and download NodeJS LTS v10.15.0 (will work since 7.5.x)
-If you already have a different version installed you can use nvw-windows (https://github.com/coreybutler/nvm-windows/releases) to change this version to v10.15.0.
+Go to https://nodejs.org/en/download/ and download NodeJS LTS v10.x (will work since 7.5.x)
+If you already have a different version installed you can use nvw-windows (https://github.com/coreybutler/nvm-windows/releases) to change this version to v10.x.
 ~~~ bash
-nvm install 10.15.0   # install a new version with nvm
-nvm use 10.15.0       # set it
+nvm install 10.16.3   # install a new version with nvm
+nvm use 10.16.3       # set it
 ~~~
 
 #### Java JDK
@@ -110,7 +110,7 @@ Download and install JDK 8 from http://www.oracle.com/technetwork/java/javase/do
 
 #### Android SDK
 
-Check https://github.com/appcelerator/titanium_mobile/blob/7_4_X/android/package.json#L23 for the current supported versions.
+Check https://github.com/appcelerator/titanium_mobile/blob/8_2_X/android/package.json#L23 for the current supported versions.
 Go to https://developer.android.com/studio/index.html#downloads and download the ZIP under "Get just the command line tools".
 
 Unzip and copy it to a folder (e.g. C:\android). Then go into the folder (c:\android\androidsdk\tools\bin) and run
@@ -138,7 +138,7 @@ ___
 
 #### Node.js
 
-- Fresh install: Go to [Nodejs.org](https://nodejs.org/en/download/) and download the v8.10.0 (LTS).
+- Fresh install: Go to [Nodejs.org](https://nodejs.org/en/download/) and download the v10.x (LTS).
 - Upgrade: Install the Node version manager `n` and update to the LTS:
 ~~~ bash
 npm install -g n
@@ -152,7 +152,7 @@ ___
 Open a console and run the following command to install the tools:
 
 ~~~ bash
-npm install -g titanium alloy appcelerator
+[sudo] npm install -g titanium alloy appcelerator
 ~~~
 
 After that we need to install the SDK.
@@ -167,13 +167,13 @@ to get the SDK and be ready to create your apps
 ### Open Source Version
 If you prefer the open source version, you run:
 ~~~ bash
-titanium sdk install --branch 7_1_X
+titanium sdk install --branch 8_2_X
 ~~~
-to get the SDK (it won't be the GA version but the latest from the 7.1.x branch) and then
+to get the SDK (it won't be the GA version but the latest from the 8.2.x branch) and then
 ~~~ bash
  ti config wizard
  ~~~
- to finish the setup. Note: As of right now (03/2018), the current latest it 7.1.0 GA. You can
+ to finish the setup. Note: As of right now (10/2019), the current latest it 8.2.0 GA. You can
  check the latest GA version by going to the [Titanium Build Server](http://builds.appcelerator.com)
  to select the latest one.
 
@@ -339,17 +339,7 @@ It allows you to quickly test your app on multiple devices at the same time and 
 
 **Note:** As of SDK 8.0.0 Liveview is now part of the SDK, it is not recommended or supported to install Liveview via npm as this will conflict with the SDK version.
 
-Liveview is available as a npm package now.
-
-* `npm install -g liveview`
-* `liveview install`
-* `liveview install clihook`
-* check it with `liveview --version`
-
 Now you can add `--liveview` to compile with liveview from command line
-
-Hint: From time to time you have to kill the servers via `liveview-server stop`
-
 
 ___
 
