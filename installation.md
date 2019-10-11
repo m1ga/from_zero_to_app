@@ -15,7 +15,7 @@ This tutorial will get you started setting up Axway Titanium and use it in combi
   - [Linux](#linux)
     - [Fedora](#fedora)
     - [Ubuntu](#ubuntu)
-    - [For all Distros (if you don't have Node.js v8.x)](#for-all-distros-if-you-dont-have-nodejs-v8x)
+    - [For all Distros (if you don't have Node.js v10.x)](#for-all-distros-if-you-dont-have-nodejs-v10x)
   - [Windows](#windows)
     - [Node.js](#nodejs)
     - [Java JDK](#java-jdk)
