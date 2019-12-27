@@ -9,7 +9,7 @@
 * **[Use the camera](./camera.md)** - Record pictures and videos in your app.
 * **[Ah, push it](./push.md)** - Extend you app with Firebase push notifications
 * **[Where am I?](./geolocation.md)** - Use geolocation services in your app.
-* **[Debugging WebViews](./debugging_webviews.md)** - Debugging Webviews: see what's inside the WebView.
+* **[Debugging WebViews](./debugging_webviews.md)** - Debugging WebViews: see what's inside the WebView.
 * Ready for the store? [_coming soon_]
 
 _Video tutorials are planed, too!_
