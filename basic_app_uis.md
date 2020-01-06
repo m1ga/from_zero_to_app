@@ -22,8 +22,7 @@ _index.js_
 $.index.open();
 ```
 
-<img src="images/windows_1.png"/>
-<img src="images/windows_2.png"/>
+<img src="images/windows_1.png"/><img src="images/windows_2.png"/>
 
 
 Inside the Window tag you can add all other like Buttons, Labels, Images and so on.
@@ -50,8 +49,7 @@ function onClickButton(e) {
 $.index.open();
 ```
 
-<img src="images/windows_3.png"/>
-<img src="images/windows_4.png"/>
+<img src="images/windows_3.png"/><img src="images/windows_4.png"/>
 
 
 Now we create a second controller; either with `alloy generate controller [controllerName]` or inside the UI by clicking the + button in the top right corner (e.g. in Atom).
@@ -116,8 +114,7 @@ $.navWin.open();
 
 Now it will open the `NavigationWindow` and we use `openWindow` to open the child window.
 
-<img src="images/windows_6.gif"/>
-<img src="images/windows_7.gif"/>
+<img src="images/windows_6.gif"/><img src="images/windows_7.gif"/>
 
 As you can see the second window has a back button now and on iOS you see a window title.
 
@@ -156,8 +153,7 @@ function onClickClose(e){
 }
 ```
 
-<img src="images/windows_8.gif"/>
-<img src="images/windows_9.gif"/>
+<img src="images/windows_8.gif"/><img src="images/windows_9.gif"/>
 
 ### Tab group
 
@@ -186,8 +182,7 @@ _index.js_
 $.index.open();
 ```
 
-<img src="images/windows_10.gif"/>
-<img src="images/windows_11.gif"/>
+<img src="images/windows_10.gif"/><img src="images/windows_11.gif"/>
 
 As you can see the default `TabGroup` menu on Android is at the top. Add some icons to the `assets/images/` folder and change the style to:
 
@@ -223,7 +218,8 @@ _index.tss_
 	style: Ti.UI.Android.TABS_STYLE_BOTTOM_NAVIGATION
 }
 ```
-<img src="images/windows_12.png"/>
-<img src="images/windows_13.png"/>
+<img src="images/windows_12.png"/><img src="images/windows_13.png"/>
 
 ### DrawerLayout
+
+tbd
