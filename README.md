@@ -10,7 +10,8 @@
 * **[Ah, push it](./push.md)** - Extend you app with Firebase push notifications
 * **[Where am I?](./geolocation.md)** - Use geolocation services in your app.
 * **[Debugging WebViews](./debugging_webviews.md)** - Debugging WebViews: see what's inside the WebView.
-* Ready for the store? [_coming soon_]
+* **[Basic App UIs](./basic_app_uis.md)** - Basic App UIs: from a basic window to complex native tab group. [ _work in progress_ ]
+
 
 _Video tutorials are planed, too!_
 
