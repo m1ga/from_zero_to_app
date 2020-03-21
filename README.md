@@ -11,6 +11,7 @@
 * **[Where am I?](./geolocation.md)** - Use geolocation services in your app.
 * **[Debugging WebViews](./debugging_webviews.md)** - Debugging WebViews: see what's inside the WebView.
 * **[Basic App UIs](./basic_app_uis.md)** - Basic App UIs: from a basic window to complex native tab group. [ _work in progress_ ]
+* **[Android Adaptive icons](./android_adaptive_icons.md)** - Android Adaptive Icons
 
 
 _Video tutorials are planed, too!_
@@ -22,7 +23,7 @@ At the time this tutorial was written the current version of the needed tools ar
 | --- | --- |
 | JDK | 1.8.0 (JDK 8; OpenJDK is supported, too) |
 | NodeJS | v10.16.0 |
-| Titanium SDK | 8.0.2.GA |
+| Titanium SDK | 8.3.1.GA |
 | Appcelerator CLI | 7.0.11 |
 | Titanium CLI |5.2.1 |
 | Alloy | 1.13.10 |
