@@ -4,6 +4,7 @@
 
 Starting with Android 8 (API 26) Google introduced the concept of `Adaptive Icons` which can display a variety of shapes across different device models. The main icon (foreground) is separated from the background (image, color, xml) and a mask is applied on top of the image.
 If you create a new app and add an Android icon it will look like this with the default setup:
+
 <img src="images/icon_app.png"/><br/>
 the blue background is not filling up the whole space and the icon is a bit small. In this tutorial we will create an Adaptive Icon that will blend in with your other apps.
 
