@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [From zero to app](#from-zero-to-app)
+  - [Android Adaptive Icons](#android-adaptive-icons)
+    - [Setup](#setup)
+    - [Create the icon](#create-the-icon)
+    - [Titanium app](#titanium-app)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # [From zero to app](https://github.com/m1ga/from_zero_to_app)
 ## Android Adaptive Icons
 ![Android Adaptive Icons](images/icon_header.jpg)

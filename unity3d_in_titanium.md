@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [_WORK IN PROGRESS - not done yet_](#_work-in-progress---not-done-yet_)
+- [Using a Unity3D project inside a Titanum app](#using-a-unity3d-project-inside-a-titanum-app)
+  - [Introduction](#introduction)
+  - [Tools](#tools)
+  - [Unity3D](#unity3d)
+  - [Android Studio](#android-studio)
+  - [Appcelerator Titanium](#appcelerator-titanium)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # _WORK IN PROGRESS - not done yet_
 
 # Using a Unity3D project inside a Titanum app

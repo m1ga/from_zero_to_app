@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [From zero to app](#from-zero-to-app)
+  - [First app](#first-app)
+  - [Project setup](#project-setup)
+  - [Folder structure](#folder-structure)
+    - [Views / XML files](#views--xml-files)
+    - [Styles / TSS files](#styles--tss-files)
+    - [Controllers / JS files](#controllers--js-files)
+  - [Getting started](#getting-started)
+  - [Create a new - clean project](#create-a-new---clean-project)
+  - [Where to go from here](#where-to-go-from-here)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # [From zero to app](https://github.com/m1ga/from_zero_to_app)
 
 ## First app

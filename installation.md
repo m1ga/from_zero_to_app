@@ -19,9 +19,11 @@ This tutorial will get you started setting up Axway Titanium and use it in combi
   - [Windows](#windows)
     - [Node.js](#nodejs)
     - [Java JDK](#java-jdk)
-    - [Android SDK](#android-sdk)
   - [macOS](#macos)
     - [Node.js](#nodejs-1)
+  - [Android SDK](#android-sdk)
+    - [manual way](#manual-way)
+    - [Android Studio](#android-studio)
 - [Axway Titanium SDK / CLI](#axway-titanium-sdk--cli)
   - [Free Version](#free-version)
   - [Open Source Version](#open-source-version)
@@ -37,6 +39,7 @@ This tutorial will get you started setting up Axway Titanium and use it in combi
     - [Linux / macOS](#linux--macos)
     - [Windows](#windows-1)
   - [TiShadow](#tishadow)
+  - [Liveview](#liveview)
 - [Link List](#link-list)
 - [Contact me](#contact-me)
 
@@ -107,10 +110,25 @@ nvm use 10.16.3       # set it
 
 Download and install JDK 8 from http://www.oracle.com/technetwork/java/javase/downloads/index.html and set the JAVA_HOME env variable inside the windows advanced system settings (e.g. C:\Program Files\Java\jdk1.8.0_45)
 
+___
 
-#### Android SDK
+### macOS
 
-Check https://github.com/appcelerator/titanium_mobile/blob/8_2_X/android/package.json#L23 for the current supported versions.
+#### Node.js
+
+- Fresh install: Go to [Nodejs.org](https://nodejs.org/en/download/) and download the v10.x (LTS).
+- Upgrade: Install the Node version manager `n` and update to the LTS:
+~~~ bash
+npm install -g n
+n lts
+~~~
+
+
+### Android SDK
+
+#### manual way
+
+Check https://github.com/appcelerator/titanium_mobile/blob/8_3_X/android/package.json#L27 for the current supported versions.
 Go to https://developer.android.com/studio#cmdline-tools and download the ZIP for your platform.
 
 Unzip and copy it to a folder (e.g. C:\android). Then go into the folder (c:\android\androidsdk\tools\bin) and run
@@ -136,18 +154,9 @@ Add the following paths to the PATH env variable:
 * C:\android\androidsdk\
 * C:\android\androidsdk\platform-tools
 
-___
+#### Android Studio
 
-### macOS
-
-#### Node.js
-
-- Fresh install: Go to [Nodejs.org](https://nodejs.org/en/download/) and download the v10.x (LTS).
-- Upgrade: Install the Node version manager `n` and update to the LTS:
-~~~ bash
-npm install -g n
-n lts
-~~~
+If you are using the latest version of Android Studio to fetch the SDK and the needed tools make sure to uncheck `Hide Obsolete packages` and install the `SDK tools`. You might also need to copy the content from `/platform-tools/platform-tools/bin` to `/platform-tools`.
 
 ___
 

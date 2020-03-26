@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [From zero to app](#from-zero-to-app)
+  - [Debugging WebViews](#debugging-webviews)
+  - [The app](#the-app)
+  - [Debugging iOS](#debugging-ios)
+  - [Debugging Android](#debugging-android)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # [From zero to app](https://github.com/m1ga/from_zero_to_app)
 
 ## Debugging WebViews
