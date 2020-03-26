@@ -111,7 +111,7 @@ Download and install JDK 8 from http://www.oracle.com/technetwork/java/javase/do
 #### Android SDK
 
 Check https://github.com/appcelerator/titanium_mobile/blob/8_2_X/android/package.json#L23 for the current supported versions.
-Go to https://developer.android.com/studio/index.html#downloads and download the ZIP under "Get just the command line tools".
+Go to https://developer.android.com/studio#cmdline-tools and download the ZIP for your platform.
 
 Unzip and copy it to a folder (e.g. C:\android). Then go into the folder (c:\android\androidsdk\tools\bin) and run
 ```bash
