@@ -127,7 +127,11 @@ sdkmanager --licenses
 * Android 6.0 (API 23) SDK Platform, Android API 28
 * other APIs if you like
 
-Download the ADB tools from https://dl.google.com/android/repository/platform-tools-latest-windows.zip and unzip it to the androidsdk folder from before.
+Download the ADB tools from :
+* https://dl.google.com/android/repository/platform-tools-latest-windows.zip
+* https://dl.google.com/android/repository/platform-tools-latest-darwin.zip
+unzip it to the androidsdk folder from before.
+
 Add the following paths to the PATH env variable:
 * C:\android\androidsdk\
 * C:\android\androidsdk\platform-tools
