@@ -47,7 +47,7 @@ This tutorial will get you started setting up Axway Titanium and use it in combi
 
 ## Installing Appcelerator Titanium
 
-The current GA ('general availability') version of the SDK is 8.2.0.GA while writing this tutorial.
+The current GA ('general availability') version of the SDK is 9.0.1.GA while writing this tutorial.
 
 At first we need to setup Axway Titanium:
 * command line tools (CLI) to compile the apps
@@ -82,7 +82,7 @@ n lts
 
 ```
 * Install Java JDK 8: http://www.if-not-true-then-false.com/2014/install-oracle-java-8-on-fedora-centos-rhel/
-* Download Android SDK (SDK Tools only): https://developer.android.com/sdk/index.html#Other
+* Download Android SDK ("Command line tools only"): https://developer.android.com/studio#downloads
 * Unzip Android SDK and run android to install SDK
 * adjust you .bash_profile:
 ```bash
@@ -90,7 +90,7 @@ export PATH=$PATH:$HOME/android-sdk-linux/tools:$HOME/android-sdk-linux/platform
 export ANDROID_SDK=$HOME/android-sdk-linux
 
 export JAVA_HOME=/usr/java/latest # fedora
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-adm64 # ubuntu
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 # ubuntu
 ```
 * run `source .bash_profile` to update the current session
 
@@ -99,11 +99,11 @@ ___
 ### Windows
 
 #### Node.js
-Go to https://nodejs.org/en/download/ and download NodeJS LTS v10.x (will work since 7.5.x)
-If you already have a different version installed you can use nvw-windows (https://github.com/coreybutler/nvm-windows/releases) to change this version to v10.x.
+Go to https://nodejs.org/en/download/ and download NodeJS v12.x.
+If you already have a different version installed you can use nvw-windows (https://github.com/coreybutler/nvm-windows/releases) to change this version to v12.x.
 ~~~ bash
-nvm install 10.16.3   # install a new version with nvm
-nvm use 10.16.3       # set it
+nvm install 12.16.1   # install a new version with nvm
+nvm use 12.16.1       # set it
 ~~~
 
 #### Java JDK
@@ -128,31 +128,30 @@ n lts
 
 #### manual way
 
-Check https://github.com/appcelerator/titanium_mobile/blob/8_3_X/android/package.json#L27 for the current supported versions.
+Check https://github.com/appcelerator/titanium_mobile/blob/9_0_X/android/package.json#L28 for the current supported versions.
 Go to https://developer.android.com/studio#cmdline-tools and download the ZIP for your platform.
 
-Unzip and copy it to a folder (e.g. C:\android). Then go into the folder (c:\android\androidsdk\tools\bin) and run
+Unzip and copy it to a folder (e.g. C:\android or /home/user/android). Then go into the folder `\tools\bin` and run
 ```bash
-sdkmanager --update
-sdkmanager "platforms;android-23" "build-tools;23.0.3" "extras;google;m2repository" "extras;android;m2repository"
-sdkmanager "platforms;android-28" "build-tools;28.0.3" "platform-tools"
-sdkmanager --licenses
+sdkmanager --sdk_root=/home/user/android/ --update
+sdkmanager --sdk_root=/home/user/android/ "extras;android;m2repository" "platforms;android-29" "build-tools;28.0.3" "platform-tools"
+sdkmanager --sdk_root=/home/user/android/ --licenses
 ```
 
 * Android SDK tools
 * Android SDK Platfom-tools
-* Android SDK Build tools (23.0.3, 28.0.3)
-* Android 6.0 (API 23) SDK Platform, Android API 28
+* Android SDK Build tools (28.0.3)
+* Android 10.0 (API 29) SDK Platform
 * other APIs if you like
 
 Download the ADB tools from :
 * https://dl.google.com/android/repository/platform-tools-latest-windows.zip
 * https://dl.google.com/android/repository/platform-tools-latest-darwin.zip
-unzip it to the androidsdk folder from before.
+unzip it to the android folder from before.
 
 Add the following paths to the PATH env variable:
-* C:\android\androidsdk\
-* C:\android\androidsdk\platform-tools
+* C:\android\
+* C:\android\platform-tools
 
 #### Android Studio
 
@@ -180,15 +179,13 @@ to get the SDK and be ready to create your apps
 ### Open Source Version
 If you prefer the open source version, you run:
 ~~~ bash
-titanium sdk install --branch 8_2_X
+titanium sdk install --branch 9_0_X
 ~~~
-to get the SDK (it won't be the GA version but the latest from the 8.2.x branch) and then
+to get the SDK and then
 ~~~ bash
  ti config wizard
  ~~~
- to finish the setup. Note: As of right now (10/2019), the current latest it 8.2.0 GA. You can
- check the latest GA version by going to the [Titanium Build Server](http://builds.appcelerator.com)
- to select the latest one.
+ to finish the setup. You can check the latest GA version by going to the [Titanium Build Server](http://builds.appcelerator.com) to select the latest one.
 
 ___
 
@@ -362,13 +359,16 @@ Here are some useful Titanium resources:
 
 * **Ti-Slack:**  http://tislack.org/ **Join the community!**
 * Axway Appcelerator: http://appcelerator.com
-* Axway Titainum (OSS): http://appcelerator.org
 * Axway Community: https://community.appcelerator.com/
-* tisdk: https://github.com/dbankier/tisdk
 * TiShadow: https://github.com/dbankier/TiShadow
 * Atom: http://atom.io
-* tidev: http://www.tidev.io/
 * gitt.io: http://gitt.io/
+* code examples: https://github.com/appcelerator/kitchensink-v2/
+* official documentation/guidelines: http://docs.appcelerator.com/platform/latest/#!/guide
+* official blog: https://devblog.axway.com/mobile-apps/
+* official tutorials: https://tutorials.axway.com/
+* official wiki: https://wiki.appcelerator.org/display/guides2/Hello+Titanium+App+Tutorial
+
 
 ## Contact me
 

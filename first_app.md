@@ -70,7 +70,7 @@ The XML files inside the /views folder contain the components that are visible o
 	</Window>
 </Alloy>
 ```
-If you have a background in web development you will see some similarities. The demo app opens a new <Window> and displays a `<Label>` with the text Hello, World and when you click on it the function `doClick` will be called in the index.js controller. The class will be used for styling the window and the ID is used to reference the Label inside the controller or style file. 
+If you have a background in web development you will see some similarities. The demo app opens a new <Window> and displays a `<Label>` with the text Hello, World and when you click on it the function `doClick` will be called in the index.js controller. The class will be used for styling the window and the ID is used to reference the Label inside the controller or style file.
 You can remove the `<Label>` row to start with a blank window.
 
 ### Styles / TSS files
@@ -92,7 +92,7 @@ TSS files are similar to CSS files with some differences in the syntax. When you
 	}
 }
 ```
-As you can see you write `"#ID"`, `"TAG"` or `".CLASS"` followed by : and {}. Inside the curly brackets you write your styles separated by commas. The available properties are listed in the documentation whe you click on an UI component and look under the "properties" section. E.g. for a Label it would be: http://docs.appcelerator.com/platform/latest/#!/api/Titanium.UI.Label. 
+As you can see you write `"#ID"`, `"TAG"` or `".CLASS"` followed by : and {}. Inside the curly brackets you write your styles separated by commas. The available properties are listed in the documentation whe you click on an UI component and look under the "properties" section. E.g. for a Label it would be: http://docs.appcelerator.com/platform/latest/#!/api/Titanium.UI.Label.
 Each tss file contains styles that are connected to the view with the same name. There is a special file called "app.tss" that is a global style file. All styles inside this file are applied to all views. For example you can put
 ```
 "Window": {
@@ -109,7 +109,7 @@ function doClick(e) {
 }
 $.index.open();
 ```
-To reference elements from the views you will use $.ID. Then you can access the properties and methods from this element. If you removed the <Label> line from the view you can also remove the doClick function from the controller. Leave the $.index.open() so it still opens the now empty window. All methods and events are listed at the API documentation at http://docs.appcelerator.com/platform/latest/#!/api. 
+To reference elements from the views you will use $.ID. Then you can access the properties and methods from this element. If you removed the <Label> line from the view you can also remove the doClick function from the controller. Leave the $.index.open() so it still opens the now empty window. All methods and events are listed at the API documentation at http://docs.appcelerator.com/platform/latest/#!/api.
 
 ## Getting started
 When you start a new app most of the time you have a layout or an idea in mind how the app should look like and what the features are you want to use it for. That is why we start in the view first and add the elements we want to show. After that we style them: move them around the screen, resize them and change colors. At the end we add the code so the user can interact with the app.  Our "Hello Word" app should display an image, text and a button. When you click the button a second window will appear with a text field the user can add some text and another button that will close the window again.
@@ -137,7 +137,7 @@ win.add(btn1);
 win.open();
 ```
 As you can see it uses the same element name e.g. "Button" and adds "create" to it, followed by ({}) where you can add the properties we will add to the TSS file later on. The Ti.UI. is the so called namespace the element is located at. The UI elements are in Ti.UI or Titanium.UI as listed in the documentation:
-	
+
 ![namespace](images/api_namespace.png)
 
 Elements are not added to the window automatically so you need to call the add() method of the window and add the elements as a parameter. The method open() will open the window.
@@ -173,7 +173,7 @@ To open a second window when we click on the button we need to add a second cont
 
 ![create controller](images/atom_create.png)
 
-or by running 
+or by running
 ```bash
 alloy generate controller NAME
 ```
@@ -214,7 +214,7 @@ The textfield will be as wide as the display with a margin of 10 (left and right
 
 ![second screen](images/app_second_screen.png)
 
-All windows are setup now and we need to write the code to open the second window and to close it again. This is done via events, in our case the click event. Two ways again to add them: inside the XML or in the controller. 
+All windows are setup now and we need to write the code to open the second window and to close it again. This is done via events, in our case the click event. Two ways again to add them: inside the XML or in the controller.
 In the XML you can add `onClick="clickFunction"` to the `<Button>`. In the controller you do this with:
 ```javascript
 $.btn1.addEventListener("click", clickFunction);
@@ -257,5 +257,21 @@ When you create a new project the default template will already add some code to
 Now you have a empty project! If you want to you can adjust the default templates to your defaults. Search for the `node_modules/alloy/templates/default` folder. E.g. on Linux it is located at `~/.appcelerator/install/7.0.2/package/node_modules/alloy/templates/default`.
 
 ## Where to go from here
-You have your first functional app that uses some of the basic structure of Appcelerator Titanium. Have a look at the [KitchenSink source code](https://github.com/appcelerator/kitchensink-v2/) and the [official API documentation ](http://docs.appcelerator.com/platform/latest/#!/api) which other elements you can use. All the UI elements have examples on how to use them inside the documentation. Play around with different components and combine them to match your app layout. 
-There is also a growing community at http://tislack.org/ you can join to ask questions, show your apps, report bugs or search for jobs! And if you want to dig even deeper you can have a look at the [source code of Titanium](https://github.com/appcelerator/titanium_mobile) and add features if you miss something. 
+You have your first functional app that uses some of the basic structure of Appcelerator Titanium. Have a look at the [KitchenSink source code](https://github.com/appcelerator/kitchensink-v2/) and the [official API documentation ](http://docs.appcelerator.com/platform/latest/#!/api) which other elements you can use. All the UI elements have examples on how to use them inside the documentation. Play around with different components and combine them to match your app layout.
+There is also a growing community at http://tislack.org/ you can join to ask questions, show your apps, report bugs or search for jobs! And if you want to dig even deeper you can have a look at the [source code of Titanium](https://github.com/appcelerator/titanium_mobile) and add features if you miss something.
+
+### Other ressources
+
+* Axway Appcelerator: http://appcelerator.com
+* Axway Community: https://community.appcelerator.com/
+* gitt.io: http://gitt.io/
+* official blog: https://devblog.axway.com/mobile-apps/
+* official tutorials: https://tutorials.axway.com/
+* official wiki: https://wiki.appcelerator.org/display/guides2/Hello+Titanium+App+Tutorial
+
+### Books
+
+Most of the books are out of date but still have some useful basic information.
+* https://www.amazon.com/Building-Cross-Platform-Titanium-Appcelerator-Services-ebook/dp/B00OMYY4G6
+* https://www.amazon.com/Appcelerator-Titanium-Smartphone-Development-Cookbook-ebook/dp/B011V2NPUC
+* https://www.amazon.com/Appcelerator-Titanium-Smartphone-Development-Cookbook-ebook/dp/B006MTIQ9K

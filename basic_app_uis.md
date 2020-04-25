@@ -1,22 +1,19 @@
+# [From zero to app](https://github.com/m1ga/from_zero_to_app)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [<center><b>work in progress</b></center>](#centerbwork-in-progressbcenter)
-- [From zero to app](#from-zero-to-app)
-  - [Basic app UI's](#basic-app-uis)
-    - [Plain setup](#plain-setup)
-    - [Open other windows](#open-other-windows)
-    - [Navigation Window](#navigation-window)
-      - [Platform specific styling](#platform-specific-styling)
+ - [Basic app UI's](#basic-app-uis)
+	- [Plain setup](#plain-setup)
+	- [Open other windows](#open-other-windows)
+	- [Navigation Window](#navigation-window)
+    	- [Platform specific styling](#platform-specific-styling)
     - [Tab group](#tab-group)
     - [DrawerLayout](#drawerlayout)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# <center><b>work in progress</b></center>
-
-# [From zero to app](https://github.com/m1ga/from_zero_to_app)
 
 ## Basic app UI's
 
@@ -235,7 +232,3 @@ _index.tss_
 }
 ```
 <img src="images/windows_12.png"/><img src="images/windows_13.png"/>
-
-### DrawerLayout
-
-tbd
