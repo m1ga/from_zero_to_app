@@ -232,3 +232,107 @@ _index.tss_
 }
 ```
 <img src="images/windows_12.png"/><img src="images/windows_13.png"/>
+
+
+### DrawerLayout (Android specific)
+
+Android has a custom layout called "DrawerLayout". It is using a hamburger menu with a left/right panel and a center view. The basic layout looks like this:
+
+<img src="images/windows_14.gif"/>
+
+<i>index.xml</i>
+```xml
+<Alloy>
+	<Window>
+		<ActionBar platform="android" displayHomeAsUp="true" onHomeIconItemSelected="onClickToggle"/>
+		<DrawerLayout id="drawer" platform="android">
+			<LeftView>
+				<View backgroundColor="#fff">
+					<Label text="Side menu"/>
+				</View>
+			</LeftView>
+			<CenterView>
+				<View backgroundColor="#fff">
+					<Label text="App content"/>
+				</View>
+			</CenterView>
+		</DrawerLayout>
+	</Window>
+</Alloy>
+```
+
+<i>index.js</i>
+
+```javascript
+
+function onClickToggle(e){
+	$.drawer.toggleLeft();
+}
+
+$.index.open();
+```
+
+To make it a bit more flexible if you want to use it for iOS too we move the view part out of the XML and into the controller:
+
+<i>index.xml</i>
+```xml
+<Alloy>
+	<Window>
+		<ActionBar platform="android" displayHomeAsUp="true" onHomeIconItemSelected="onClickToggle"/>
+		<DrawerLayout id="drawer" platform="android" />
+	</Window>
+</Alloy>
+```
+
+<i>index.js</i>
+```javascript
+var centerView = Ti.UI.createView({
+	backgroundColor: "#fff"
+});
+var leftView = Ti.UI.createView({
+	backgroundColor: "#fff"
+});
+
+var lbl1 = Ti.UI.createLabel({
+	text: "center",
+	color: "#000"
+})
+
+var lbl2 = Ti.UI.createLabel({
+	text: "left",
+	color: "#000"
+})
+
+centerView.add(lbl1);
+leftView.add(lbl2);
+
+if (OS_ANDROID){
+	$.drawer.centerView = centerView;
+	$.drawer.leftView = leftView;
+}
+
+function onClickToggle(e){
+	$.drawer.toggleLeft();
+}
+
+$.index.open();
+```
+
+With this setup you can create a custom layout for iOS and use the same views without having duplicate content. To have the same hamburger menu setup on iOS you can create a custom layout or use a plugin like https://github.com/viezel/NappDrawer. The controller would look like this:
+
+```javascript
+if (OS_IOS){
+	var NappDrawerModule = require('dk.napp.drawer');
+	var mainWindow = NappDrawerModule.createDrawer({
+		centerWindow: $.index,
+		leftWindow: leftView,
+		openDrawerGestureMode: NappDrawerModule.OPEN_MODE_NONE,
+		closeDrawerGestureMode: NappDrawerModule.CLOSE_MODE_TAP_CENTERWINDOW | NappDrawerModule.CLOSE_MODE_PANNING_CENTERWINDOW,
+		statusBarStyle: NappDrawerModule.STATUSBAR_WHITE,
+		orientationModes: [Ti.UI.PORTRAIT, Ti.UI.UPSIDE_PORTRAIT]
+	});
+	$.index.add(centerView);
+	mainWindow.open();
+}
+```
+We will cover modules in a different tutorial.
