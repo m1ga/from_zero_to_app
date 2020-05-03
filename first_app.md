@@ -17,6 +17,8 @@
 
 # [From zero to app](https://github.com/m1ga/from_zero_to_app)
 
+<span class="badge-patreon"><a href="https://www.patreon.com/michaelgangolf" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+
 ## First app
 
 In this tutorial we will create a first `Hello World` app with Axway Appcelerator.
