@@ -39,7 +39,7 @@ For security reasons both Android and iOS needs to ask the user first to access 
 			<!-- needed for video -->
 			<key>NSCameraUsageDescription</key>
 			<string>For Video recording we want to use the microphone</string>
-		</div>
+		</dict>
 	</plist>
 </ios>
 ```
