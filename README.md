@@ -26,6 +26,7 @@
 * **[Debugging WebViews](./debugging_webviews.md)** - Debugging WebViews: see what's inside the WebView.
 * **[Basic App UIs](./basic_app_uis.md)** - Basic App UIs: from a basic window to complex native tab group.
 * **[Android Adaptive icons](./android_adaptive_icons.md)** - Android Adaptive Icons
+* **[Debugging using Chrome DevTools](./chrome_devtools.md)** - Using Chrome DevTools to fully debug your app.
 
 
 _Video tutorials are planed, too!_
