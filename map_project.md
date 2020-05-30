@@ -42,7 +42,7 @@ This will allow you to use the module for iOS and Android.
 
 Other external modules are added like this, too. But we will only use the Map module in this tutorial.
 
-## Goolge API key
+## Android / Goolge API key
 
 On Android you need to have a Google API key to use the Goolge Maps. Go to https://console.developers.google.com/apis/ and create a new project.
 
@@ -67,7 +67,18 @@ This key has to go into the `tiapp.xml`. Search for the `<android xmlns:android=
 </android>
 ```
 
-Since iOS uses the native Apple Maps you don't have to do anything on this side.
+## iOS
+
+Add `NSLocationAlwaysUsageDescription` or `NSLocationWhenInUseUsageDescription` to your `tiapp.xml` `<plist><dict>` block:
+```
+ <key>NSLocationAlwaysUsageDescription</key>
+        <string>
+            Specify the reason for accessing the user's location information.
+            This appears in the alert dialog when asking the user for permission to
+            access their location.
+        </string>
+```
+Since iOS uses the native Apple Maps you don't have to do anything else on this side.
 
 ## Add the view
 
