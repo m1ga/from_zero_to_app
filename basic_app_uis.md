@@ -199,7 +199,11 @@ $.index.open();
 
 <img src="images/windows_10.gif"/><img src="images/windows_11.gif"/>
 
-As you can see the default `TabGroup` menu on Android is at the top. Add some icons to the `assets/images/` folder and change the style to:
+As you can see the default `TabGroup` menu on Android is at the top. 
+
+#### BottomNavigation
+
+You can also change the Android style to a BottomNavigation and or add some icons to the `assets/images/` folder and change the style to:
 
 _index.xml_
 ```xml
