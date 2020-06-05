@@ -1,3 +1,8 @@
+# _WORK IN PROGRESS - not done yet_
+
+<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span>
+
+# Using a Unity3D project inside a Titanum app
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -11,10 +16,6 @@
   - [Appcelerator Titanium](#appcelerator-titanium)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# _WORK IN PROGRESS - not done yet_
-
-# Using a Unity3D project inside a Titanum app
 
 ## Introduction
 

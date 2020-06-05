@@ -1,18 +1,6 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [From zero to app](#from-zero-to-app)
-  - [Tutorials](#tutorials)
-  - [Requirements](#requirements)
-  - [Feedback](#feedback)
-  - [Author](#author)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # From zero to app
 
-<span class="badge-patreon"><a href="https://www.patreon.com/michaelgangolf" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span>
 
 `From zero to app` will be a series of basic tutorials for Axway Appcelerator to create your first mobile app for Android and iOS using the power of JavaScript. You just need some basic JavaScript knowledge and a Linux, Windows or Mac (for iOS development). The tutorials will guide you from zero to your first app!
 

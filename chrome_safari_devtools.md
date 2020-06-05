@@ -1,6 +1,6 @@
 # [From zero to app](https://github.com/m1ga/from_zero_to_app)
 
-<span class="badge-patreon"><a href="https://www.patreon.com/michaelgangolf" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span>
 
 To debug WebViews have a look at <a href="./debugging_webviews.md">Debugging WebViews</a>.<br/>
 If you are interested in debugging using VS Code have a look at <a href="https://devblog.axway.com/mobile-apps/vs-code-debugging-for-titanium/">https://devblog.axway.com/mobile-apps/vs-code-debugging-for-titanium/</a>

@@ -1,3 +1,9 @@
+# [From zero to app](https://github.com/m1ga/from_zero_to_app)
+
+<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span>
+
+## Where am I?
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -11,10 +17,6 @@
     - [Documentation](#documentation)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# [From zero to app](https://github.com/m1ga/from_zero_to_app)
-
-## Where am I?
 
 If you want to create a location based app you need to know the GPS position of the user. In order to get them we can use the  geolocation services of your phone. Since this is sensible data we need to ask the user for permission.
 
@@ -142,7 +144,7 @@ The `Ti.Gelocation` features another useful event for geo based apps: `heading`.
 Ti.Geolocation.addEventListener('heading', onHeading);
 
 function onHeading(returnObject){
-	// 
+	//
 	console.log(returnObject.heading.magneticHeading);
 	console.log(returnObject.heading.x);
 	console.log(returnObject.heading.y);

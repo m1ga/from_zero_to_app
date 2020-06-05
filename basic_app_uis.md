@@ -1,6 +1,6 @@
 # [From zero to app](https://github.com/m1ga/from_zero_to_app)
 
-<span class="badge-patreon"><a href="https://www.patreon.com/michaelgangolf" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span>
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -199,7 +199,7 @@ $.index.open();
 
 <img src="images/windows_10.gif"/><img src="images/windows_11.gif"/>
 
-As you can see the default `TabGroup` menu on Android is at the top. 
+As you can see the default `TabGroup` menu on Android is at the top.
 
 #### BottomNavigation
 

@@ -1,3 +1,9 @@
+# [From zero to app](https://github.com/m1ga/from_zero_to_app)
+
+<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span>
+
+## First app
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -14,12 +20,6 @@
   - [Where to go from here](#where-to-go-from-here)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# [From zero to app](https://github.com/m1ga/from_zero_to_app)
-
-<span class="badge-patreon"><a href="https://www.patreon.com/michaelgangolf" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
-
-## First app
 
 In this tutorial we will create a first `Hello World` app with Axway Appcelerator.
 We will use the command line tools in combination with Atom and not [Appcelerator Studio](https://platform.appcelerator.com/) to create and compile our projects. But all the code is working with Appcelerator Studio and other IDEs, too!

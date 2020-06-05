@@ -1,3 +1,13 @@
+# [From zero to app](https://github.com/m1ga/from_zero_to_app)
+
+<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span>
+
+## Ah, push it
+
+Extend you app with Firebase push notifications
+
+![app with map](images/push_intro.png)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -15,14 +25,6 @@
     - [Android: custom sound](#android-custom-sound)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# [From zero to app](https://github.com/m1ga/from_zero_to_app)
-
-## Ah, push it
-
-Extend you app with Firebase push notifications
-
-![app with map](images/push_intro.png)
 
 ## Project setup
 
