@@ -23,10 +23,11 @@ This tutorial will get you started setting up Axway Titanium and use it in combi
     - [Node.js](#nodejs)
     - [Java JDK](#java-jdk)
   - [macOS](#macos)
+    - [Java JDK](#java-jdk-1)
     - [Node.js](#nodejs-1)
   - [Android SDK](#android-sdk)
-    - [manual way](#manual-way)
     - [Android Studio](#android-studio)
+    - [manual way](#manual-way)
 - [Axway Titanium SDK / CLI](#axway-titanium-sdk--cli)
   - [Free Version](#free-version)
   - [Open Source Version](#open-source-version)
@@ -117,6 +118,22 @@ ___
 
 ### macOS
 
+#### Java JDK
+
+List available Java JDK installations:
+```
+/usr/libexec/java_home -V
+```
+
+select a version
+```
+export JAVA_HOME=$(/usr/libexec/java_home -v <JdkVersionYouWant>)
+```
+and put that in your `.bash_profile` or `.zprofile`
+```
+export JAVA_HOME=$(/usr/libexec/java_home -v 11.0.6)
+```
+
 #### Node.js
 
 - Fresh install: Go to [Nodejs.org](https://nodejs.org/en/download/) and download the v10.x (LTS).
@@ -128,6 +145,13 @@ n lts
 
 
 ### Android SDK
+
+The Android SDK is necessary if you want to compile an Android app. There are two ways to install it:
+
+#### Android Studio
+Download Android Studio and let it handle the SDK install.
+If you are using the latest version of Android Studio to fetch the SDK and the needed tools make sure to uncheck `Hide Obsolete packages` and install the `SDK tools`. You might also need to copy the content from `/platform-tools/platform-tools/bin` to `/platform-tools`.
+
 
 #### manual way
 
@@ -155,10 +179,6 @@ unzip it to the android folder from before.
 Add the following paths to the PATH env variable:
 * C:\android\
 * C:\android\platform-tools
-
-#### Android Studio
-
-If you are using the latest version of Android Studio to fetch the SDK and the needed tools make sure to uncheck `Hide Obsolete packages` and install the `SDK tools`. You might also need to copy the content from `/platform-tools/platform-tools/bin` to `/platform-tools`.
 
 ___
 
