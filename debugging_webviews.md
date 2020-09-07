@@ -60,6 +60,12 @@ When you run the app it will look like this:<br/>
 
 ## Debugging iOS
 
+### Quick tip: Missing local files
+
+A small note at the beginning: if you have missing files in your iOS Webview try to set `<use-app-thinning>false</use-app-thinning>` inside your tiapp.xml!
+
+### Debug
+
 At first we will use Safari to debug the iOS WebView. In the Safari settings you will need to enable the “Developer settings” first by setting this flag:
 
 <img src="images/debug_2.png"/>
