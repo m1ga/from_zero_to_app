@@ -119,9 +119,6 @@ if (OS_IOS) {
 				// Fired for all kind of notifications (foreground, background & closed)
 			}
 		});
-
-		// Register for Firebase Cloud Messaging
-		fcm.registerForPushNotifications();
 	});
 
 	// Register for the notification settings event
@@ -133,6 +130,7 @@ if (OS_IOS) {
 		]
 	});
 } else {
+	// Register for Firebase Cloud Messaging
 	fcm.registerForPushNotifications();
 }
 
