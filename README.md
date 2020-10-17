@@ -5,19 +5,18 @@
 `From zero to app` will be a series of basic tutorials for Axway Appcelerator to create your first mobile app for Android and iOS using the power of JavaScript. You just need some basic JavaScript knowledge and a Linux, Windows or Mac (for iOS development). The tutorials will guide you from zero to your first app!
 
 ## Tutorials
-* **[Installation](./installation.md)** - How to install Axway Appcelerator
+* **[Installation](./installation.md)** - How to install Axway Appcelerator.
 * **[First app](./first_app.md)** - Your first app!
 * **[Map project](./map_project.md)** - Add a map with pins to your app.
 * **[Use the camera](./camera.md)** - Record pictures and videos in your app.
-* **[Ah, push it](./push.md)** - Extend you app with Firebase push notifications
+* **[Ah, push it](./push.md)** - Extend you app with Firebase push notifications.
 * **[Where am I?](./geolocation.md)** - Use geolocation services in your app.
 * **[Debugging WebViews](./debugging_webviews.md)** - Debugging WebViews: see what's inside the WebView.
 * **[Basic App UIs](./basic_app_uis.md)** - Basic App UIs: from a basic window to complex native tab group.
-* **[Android Adaptive icons](./android_adaptive_icons.md)** - Android Adaptive Icons
+* **[Android Adaptive icons](./android_adaptive_icons.md)** - Android Adaptive Icons.
 * **[Debugging using Chrome/Safari DevTools](./chrome_safari_devtools.md)** - Using Chrome/Safari DevTools to debug your app.
+* **[Android Modules: using local aar files](./android_modules_local_aar.md)** - How to use a local AAR file when creating an Android module.
 
-
-_Video tutorials are planed, too!_
 
 ## Requirements
 At the time this tutorial was written the current version of the needed tools are:
@@ -26,7 +25,7 @@ At the time this tutorial was written the current version of the needed tools ar
 | --- | --- |
 | JDK | 1.8.0 (JDK 8; OpenJDK is supported, too) |
 | NodeJS | v12.16.1 |
-| Titanium SDK | 9.0.1.GA |
+| Titanium SDK | 9.0.3.GA |
 | Appcelerator CLI | 8.0.8 |
 | Titanium CLI |5.2.2 |
 | Alloy | 1.14.6 |
