@@ -109,15 +109,9 @@ if (OS_IOS) {
 
 		// Register for push notifications
 		Ti.Network.registerForPushNotifications({
-			success: function() {
-				//
-			},
-			error: function() {
-				//
-			},
-			callback: function() {
-				// Fired for all kind of notifications (foreground, background & closed)
-			}
+			success: onToken,
+			error: function() {},
+			callback: onMessage
 		});
 	});
 
@@ -139,7 +133,11 @@ fcm.addEventListener("didReceiveMessage", onMessage);
 
 function onToken(e) {
 	// if needed: send it to your server
-	alert("new token" + e.fcmToken);
+	if (OS_ANDROID) {
+		alert("new Android token" + e.fcmToken);
+	} else {
+		alert("new iOS token" + fcm.fcmToken);
+	}
 }
 
 function onMessage(e) {
