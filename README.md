@@ -17,6 +17,19 @@
 * **[Debugging using Chrome/Safari DevTools](./chrome_safari_devtools.md)** - Using Chrome/Safari DevTools to debug your app.
 * **[Android Modules: using local aar files](./android_modules_local_aar.md)** - How to use a local AAR file when creating an Android module.
 
+## External Tutorials
+
+* [Axway Blog posts](https://devblog.axway.com/)
+* [Medium posts about Titanium](https://medium.com/all-titanium)
+* [Ti.UI Basics: How to use AlertDialog in Alloy](https://medium.com/all-titanium/ti-ui-basics-how-to-use-alertdialog-in-alloy-1059c7d70278)
+* [Enhancing Titanium: How to set up Collections with DataBinding](https://medium.com/all-titanium/enhancing-titanium-how-to-set-up-collections-with-databinding-39573cd30911)
+* [Enhancing Titanium: Speeding up data binding](https://medium.com/all-titanium/enhancing-titanium-speeding-up-data-binding-5adf46f73760)
+* [Quick Tip: Appcelerator Titanium Dark-Mode colors](https://dev.to/miga/quick-tip-appcelerator-titanium-dark-mode-colors-1n7g)
+* [Using Android Studio to develop Titanium modules](https://dev.to/miga/using-android-studio-to-develop-titanium-modules-2jc4)
+* [Hyperloop examples](https://github.com/appcelerator/hyperloop-examples)
+* [Stackoverflow](https://stackoverflow.com/questions/tagged/appcelerator-titanium)
+* [Axway Developer - Youtube](https://www.youtube.com/user/Appcelerator/videos)
+
 
 ## Requirements
 At the time this tutorial was written the current version of the needed tools are:
