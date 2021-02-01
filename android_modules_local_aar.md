@@ -87,4 +87,32 @@ The output will be something like `[INFO]  Polar: Version: 2.2.2`.
 
 #### 3. Use a local repository
 
-_TBD_
+create a local maven repo. It is just a folder (e.g. /home/miga/tmp/) with a pom.xml containing:
+```xml
+<repositories>
+    <repository>
+        <id>repository</id>
+        <url>/home/miga/tmp/</url>
+    </repository>
+</repositories>
+```
+
+Then run
+
+```
+mvn install:install-file -Dfile=/home/miga/download/lib.aar -DgroupId=YOUR_GROUP_ID -DartifactId=YOUR_ARTIFACT_ID -Dversion=1.0.0 -Dpackaging=aar -DlocalRepositoryPath=/home/miga/tmp
+```
+
+and it will add the aar to the local repo.
+
+In the module AND app add this to your build.gradle:
+```
+repositories {
+    maven {
+     url '/home/miga/tmp/'
+    }
+}
+dependencies {
+    implementation 'YOUR_GROUP_ID:YOUR_ARTIFACT_ID:1.0.0'
+}
+```
