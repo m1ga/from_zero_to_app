@@ -152,6 +152,7 @@ The Android SDK is necessary if you want to compile an Android app. There are tw
 Download Android Studio and let it handle the SDK install.
 If you are using the latest version of Android Studio to fetch the SDK and the needed tools make sure to uncheck `Hide Obsolete packages` and install the `SDK tools`. You might also need to copy the content from `/platform-tools/platform-tools/bin` to `/platform-tools`.
 
+Also if you use macOS Big Sur you'll need to run `defaults write com.google.android.studio AppleWindowTabbingMode manual` in a console so Android Studio 4.1.2 won't freeze when you create an AVD or download extra SDKs.
 
 #### manual way
 
