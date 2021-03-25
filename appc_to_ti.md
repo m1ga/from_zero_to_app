@@ -8,7 +8,7 @@ Axway announced that they will hand over Titanum to the community at <a href="ht
 
 ## CLI
 
-<i>If you don't use Hyperloop or Axway services you can do the change right away!</i>
+<i>If you don't use services you can do the change right away!</i>
 
 The `appc` CLI will go away and you have to use the `ti` commands. Basically they are the same and you can create and compile your apps with both CLIs. E.g.
 ```bash
