@@ -18,7 +18,7 @@ will be
 ```bash
 ti build -p android  -T device
 ```
-You can either look at `ti --help` or use an IDE (Atom or VSCode).
+You can either look at `ti --help` or use an IDE (Atom or VSCode). Both editor packages support the `ti cli` inside their settings.
 
 ## tiapp.xml
 
