@@ -252,12 +252,14 @@ Other useful non-Titanium packages/add-ons:
 | [minimap-highlight-selected](https://atom.io/packages/minimap-highlight-selected) | A minimap binding for the highlight-selected package|
 | [minimap](https://atom.io/packages/minimap) | A preview of the full source code.|
 | [pigments](https://atom.io/packages/pigments) | A package to display colors in project and files.|
+| [highlight-colors](https://atom.io/packages/highlight-colors) | Alternative way to display colors in your code.|
+| [color-picker](https://atom.io/packages/color-picker) | Use a color picker dialog to select a color.|
 | [Platformio-ide-terminal](https://atom.io/packages/platformio-ide-terminal) | An active fork from previous terminal package for Atom, running in newer versions, complete with themes and more|
 | [Project Manager](https://atom.io/packages/project-manager) | Project manager|
 | [symbols-list](https://atom.io/packages/symbols-list) | Will display all functions in a sidebar|
 | [sync-settings](https://atom.io/packages/sync-settings) | Syncs Atom settings, plugins etc using Gists. Very handy if you have multiple machines and want to have the same settings everywhere|
 | [Terminal-plus](https://atom.io/packages/terminal-plus) | A terminal package for Atom, complete with themes and more. NOTE: will probably **fail** with newer Atom versions, try next|
-| [auto-close-html2](https://github.com/yubaoquan/auto-close-html2) | Automatically close XML tags]
+| [auto-close-html2](https://github.com/yubaoquan/auto-close-html2) | Automatically close XML tags|
 
 ___
 
