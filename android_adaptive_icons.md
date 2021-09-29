@@ -74,7 +74,7 @@ To use the Adaptive Icon in your Titanium app you have to add this to your tiapp
 <android xmlns:android="http://schemas.android.com/apk/res/android">
 	<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1">
 
-		<application android:icon="@mipmap/appicon"/>
+		<application android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" />
 
 	</manifest>
 </android>
