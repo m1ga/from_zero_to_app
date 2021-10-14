@@ -17,6 +17,7 @@
 * **[Debugging using Chrome/Safari DevTools](./chrome_safari_devtools.md)** - Using Chrome/Safari DevTools to debug your app.
 * **[Android Modules: using local aar files](./android_modules_local_aar.md)** - How to use a local AAR file when creating an Android module.
 * **[Transfer your app from appc CLI to ti CLI](./appc_to_ti.md)** - Start use the open source CLI right away!
+* **[Appwrite + Appcelerator Titanium: A step by step guide](./appwrite_app.md)** - Connect an app with Appwrite.io
 
 
 ## External Tutorials
