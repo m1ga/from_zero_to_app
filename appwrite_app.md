@@ -85,6 +85,21 @@ Goto https://github.com/m1ga/ti.appwrite and download the module. Place the ZIP 
   ```
 When you build your app now with `ti build -p android` it will extract the module and you can use it now.
 
+One other element we will need to add is this code:
+```xml
+<application>
+	<activity android:name="io.appwrite.views.CallbackActivity" android:exported="true">
+		<intent-filter android:label="android_web_auth">
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<category android:name="android.intent.category.BROWSABLE"/>
+			<data android:scheme="appwrite-callback-[PROJECT_ID]"/>
+		</intent-filter>
+	</activity>
+</application>
+```
+Make sure to change `[PROJECT_ID]` to your ID.
+
 
 ### Connect to the Appwrite server
 
