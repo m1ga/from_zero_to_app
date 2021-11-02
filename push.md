@@ -57,7 +57,7 @@ Go to <https://console.firebase.google.com/> and create a project.
 
 -   place it here:
 -   iOS: place `GoogleService-Info.plist` into `app/assets/iphone/`
--   Android: place `google-services.json` into `/app/assets/android/`
+-   Android: place `google-services.json` into `/app/platform/android/`
 
 For iOS we need to upload a p8 file.
 
