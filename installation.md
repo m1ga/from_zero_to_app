@@ -1,9 +1,8 @@
 # [From zero to app](https://github.com/m1ga/from_zero_to_app)
 
-## How to install Axway Appcelerator in combination with Atom
+## How to install Appcelerator Titanium
 
-Since Axway Titanium SDK 6.0.4.GA, the "Indie Tear" is now free and you can get the latest SDK and use Hyperloop.
-This tutorial will get you started setting up Axway Titanium and use it in combination with Atom as an editor on Linux, Windows and macOS (you could use other editors like Sublime or Visual Studio Code but that's not part of this tutorial).
+This tutorial will get you started setting up Appcelerator Titanium and use it in combination with Atom as an editor on Linux, Windows and macOS. You can also use it with VSCode and the VSCode package.
 
 ![main view](images/main_view.png)
 
@@ -28,7 +27,7 @@ This tutorial will get you started setting up Axway Titanium and use it in combi
   - [Android SDK](#android-sdk)
     - [Android Studio](#android-studio)
     - [manual way](#manual-way)
-- [Axway Titanium SDK / CLI](#axway-titanium-sdk--cli)
+- [Appcelerator Titanium SDK / CLI](#axway-titanium-sdk--cli)
   - [Free Version](#free-version)
   - [Open Source Version](#open-source-version)
 - [Install Atom (and some useful Packages)](#install-atom-and-some-useful-packages)
@@ -51,9 +50,9 @@ This tutorial will get you started setting up Axway Titanium and use it in combi
 
 ## Installing Appcelerator Titanium
 
-The current GA ('general availability') version of the SDK is 9.0.1.GA while writing this tutorial.
+The current GA ('general availability') version of the SDK is 10.1.1.GA.
 
-At first we need to setup Axway Titanium:
+At first we need to setup Appcelerator Titanium:
 * command line tools (CLI) to compile the apps
 * the MVC framework Alloy
 * some useful tools
@@ -67,25 +66,24 @@ ___
 
 #### Fedora
 
-If you are using Fedora 26-30 you can run the following commands to get the needed libraries:
+If you are using Fedora 26+ you can run the following commands to get the needed libraries:
 ```bash
 # install tools and libraries
-sudo dnf install nodejs npm git gcc glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686
+sudo dnf install nodejs npm git gcc glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686 java-11-openjdk
 ```
 #### Ubuntu
 ``` bash
-sudo apt-get install nodejs npm git gcc  gcc-multilib openjdk-8-jdk android-tools-adb
+sudo apt-get install nodejs npm git gcc  gcc-multilib openjdk-11-jdk android-tools-adb
 ```
 
-#### For all Distros (if you don't have Node.js v10.x)
-If you do not have node v 10.x already you can up/downgrade with `n`
+#### For all Distros (if you don't have Node.js v14.x)
+If you do not have node v 14.x already you can up/downgrade with `n`
 ``` bash
-# install npm version 10.x
+# install npm version 14.x
 npm install -g n
 n lts
-
 ```
-* Install Java JDK 8: http://www.if-not-true-then-false.com/2014/install-oracle-java-8-on-fedora-centos-rhel/
+
 * Download Android SDK ("Command line tools only"): https://developer.android.com/studio#downloads
 * Unzip Android SDK and run android to install SDK
 * adjust you .bash_profile:
@@ -94,7 +92,6 @@ export PATH=$PATH:$HOME/android-sdk-linux/tools:$HOME/android-sdk-linux/platform
 export ANDROID_SDK=$HOME/android-sdk-linux
 
 export JAVA_HOME=/usr/java/latest # fedora
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 # ubuntu
 ```
 * run `source .bash_profile` to update the current session
 
@@ -103,16 +100,16 @@ ___
 ### Windows
 
 #### Node.js
-Go to https://nodejs.org/en/download/ and download NodeJS v12.x.
-If you already have a different version installed you can use nvw-windows (https://github.com/coreybutler/nvm-windows/releases) to change this version to v12.x.
+Go to https://nodejs.org/en/download/ and download NodeJS v14.x.
+If you already have a different version installed you can use nvw-windows (https://github.com/coreybutler/nvm-windows/releases) to change this version to v14.x.
 ~~~ bash
-nvm install 12.16.1   # install a new version with nvm
-nvm use 12.16.1       # set it
+nvm install 14   # install a new version with nvm
+nvm use 14       # set it
 ~~~
 
 #### Java JDK
 
-Download and install JDK 8 from http://www.oracle.com/technetwork/java/javase/downloads/index.html and set the JAVA_HOME env variable inside the windows advanced system settings (e.g. C:\Program Files\Java\jdk1.8.0_45)
+Download and install JDK 16 from http://www.oracle.com/technetwork/java/javase/downloads/index.html and set the JAVA_HOME env variable inside the windows advanced system settings (e.g. C:\Program Files\Java\jdk16)
 
 ___
 
@@ -131,12 +128,12 @@ export JAVA_HOME=$(/usr/libexec/java_home -v <JdkVersionYouWant>)
 ```
 and put that in your `.bash_profile` or `.zprofile`
 ```
-export JAVA_HOME=$(/usr/libexec/java_home -v 11.0.6)
+export JAVA_HOME=$(/usr/libexec/java_home -v 16)
 ```
 
 #### Node.js
 
-- Fresh install: Go to [Nodejs.org](https://nodejs.org/en/download/) and download the v10.x (LTS).
+- Fresh install: Go to [Nodejs.org](https://nodejs.org/en/download/) and download the v16.x (LTS).
 - Upgrade: Install the Node version manager `n` and update to the LTS:
 ~~~ bash
 npm install -g n
@@ -183,7 +180,7 @@ Add the following paths to the PATH env variable:
 
 ___
 
-## Axway Titanium SDK / CLI
+## Appcelerator Titanium SDK / CLI
 
 Open a console and run the following command to install the tools:
 
@@ -193,23 +190,16 @@ Open a console and run the following command to install the tools:
 
 After that we need to install the SDK.
 
-### Free Version
-If you use the free/indie version, you can run
-~~~ bash
-appc setup
-~~~
-to get the SDK and be ready to create your apps
-
 ### Open Source Version
-If you prefer the open source version, you run:
+You can run
 ~~~ bash
-titanium sdk install --branch 9_0_X
+titanium sdk install 10.1.1.GA
 ~~~
 to get the SDK and then
 ~~~ bash
  ti config wizard
  ~~~
- to finish the setup. You can check the latest GA version by going to the [Titanium Build Server](http://builds.appcelerator.com) to select the latest one.
+ to finish the setup. You can check the latest GA version by going to the [Titanium Github](https://github.com/appcelerator/titanium_mobile/releases) to select the latest one.
 
 ___
 
@@ -292,19 +282,19 @@ There are several ways to compile your app. You can use the simulator/emulator, 
 
 ~~~ bash
 # android to device
-appc ti build -p android  -T device
+ti build -p android  -T device
 
 # android build-only (good for testing)
-appc ti build -p android -b --skip-minify
+ti build -p android -b --skip-minify
 
 # android to store/file
-appc ti build -p android -K /home/user/keyfile.keystore -T dist-playstore
+ti build -p android -K /home/user/keyfile.keystore -T dist-playstore
 
 # iOS simulator: will show a menu to select the size/device (e.g. press 8 for iPhone 5S
-appc ti build -p ios -C ?
+ti build -p ios -C ?
 
 # iOS ipa/device/store: will show you a menu to select the different profiles
-appc ti build -p ios --target ?
+ti build -p ios --target ?
 ~~~
 
 ##### iOS related
@@ -324,16 +314,16 @@ In **Linux/macOS** you open the *.bashrc* file and add the following aliases:
 
 ~~~ bash
 # Run on Android device, skip minification to speed up the build
-alias tq='appc ti build -p android  -T device --skip-js-minify'
+alias tq='ti build -p android  -T device --skip-js-minify'
 # Distribute Android for Google Play, specify the required keystores
-alias tbs='appc ti build -p android -K /home/user/keyfile.keystore -T dist-playstore'
+alias tbs='ti build -p android -K /home/user/keyfile.keystore -T dist-playstore'
 # Create an Android APK without installing it to the device. Grab from build/android/bin
-alias tq_only='appc ti build -p android --build-only'
+alias tq_only='ti build -p android --build-only'
 
 # Run on iOS, specify a device
-alias tq_ios='appc ti build -p ios -C ?'
+alias tq_ios='ti build -p ios -C ?'
 # Distribute iOS for the App Store
-alias tq_ios_store='appc ti build -p ios --target dist-appstore'
+alias tq_ios_store='ti build -p ios --target dist-appstore'
 ~~~
 then you can just write "tq" to compile and install on your connected device or write "tbs" to build an apk for the play store.
 
