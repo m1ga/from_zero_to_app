@@ -48,8 +48,15 @@ repositories {
 
 
 dependencies {
-    implementation files('../../libs/polar-ble-sdk.aar')
-    implementation files('../../libs/polar-protobuf-release.aar')
+    // old method; looks like newer gradles versions don't support this
+    //
+    // implementation files('../../libs/polar-ble-sdk.aar')
+    // implementation files('../../libs/polar-protobuf-release.aar')
+
+    // new version
+    compileOnly files('../../libs/polar-ble-sdk-1.0.0.aar')
+    compileOnly files('../../libs/polar-protobuf-release.aar')
+
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
     implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
 }
