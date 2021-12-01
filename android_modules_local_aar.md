@@ -80,8 +80,14 @@ so we can check that the module is working inside the app.
 Now it is time to build the module and copy the zip into the Titanium app.
 
 
-Inside the app project we create a `build.gradle` at `app/platform/android/build.gradle` and add the same content as before.
-Place the aar file into `/build/libs` and add this code to `app.js`:
+Inside the app project we create a `build.gradle` at `app/platform/android/build.gradle` and add:
+```
+dependencies {
+  implementation fileTree(dir: "${projectDir}/../../libs", include: ['*.aar'])
+}
+```
+
+Place the aar files into `/build/libs` and add this code to `app.js`:
 
 ```javascript
 var window = Ti.UI.createWindow({title: "Test"});
