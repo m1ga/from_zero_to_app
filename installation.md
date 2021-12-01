@@ -99,6 +99,16 @@ ___
 
 ### Windows
 
+#### Quick install
+
+* update/install the CLI (admin command prompt): npm i -g titanium alloy appcelerator
+* enable "dev mode" in Windows in the security settings to run node scripts
+* `ti sdk install 10.1.1.GA`  to have the latest SDK
+* download OpenJDK from https://jdk.java.net/archive (11.0.2)
+* extract the ZIP to e.g. `c:\programms\java\jdk-11.0.2`
+* set system JAVA_HOME variable to the same folder
+* restart command prompt
+
 #### Node.js
 Go to https://nodejs.org/en/download/ and download NodeJS v14.x.
 If you already have a different version installed you can use nvw-windows (https://github.com/coreybutler/nvm-windows/releases) to change this version to v14.x.
@@ -109,7 +119,7 @@ nvm use 14       # set it
 
 #### Java JDK
 
-Download and install JDK 16 from http://www.oracle.com/technetwork/java/javase/downloads/index.html and set the JAVA_HOME env variable inside the windows advanced system settings (e.g. C:\Program Files\Java\jdk16)
+Download and install JDK 11 from http://www.oracle.com/technetwork/java/javase/downloads/index.html and set the JAVA_HOME env variable inside the windows advanced system settings (e.g. C:\Program Files\Java\jdk11)
 
 ___
 
