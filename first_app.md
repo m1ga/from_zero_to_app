@@ -28,13 +28,15 @@ We will use the command line tools in combination with Atom and not [Appcelerato
 To create a new project (a so called Alloy project) we run the following command:
 
 ```bash
-appc new
+ti create
+# go into the folder
+alloy new
 ```
 
 and you can select `Titanium App` and `Titanium SDK` inside the menu. After that you set your project name which will also be the folder and app name. You can change the app name once the project is created of course. At the end you need to give your app an application ID or bundle identifier. This ID is needed by the App stores to identify your app and it has to be unique. Think of it like a domain URL. You are free to use whatever you like here but normally you would use something like `com.CompanyName.AppName` here. The project folder will be created now and say "no" the last question about `Hyperloop` since we won’t use it in this tutorial. Open this folder in Atom.
 If you have an Android phone connected to your machine you can run
 ```bash
-appc run -p android -T device
+ti build -p android -T device
 ```
 inside the root folder of your project and it will compile, install and run the demo app on your phone. You should see a Label and when you click on it an alert dialog will pop-up.
 
@@ -166,7 +168,7 @@ Now is a good time to run the app and check how it looks like on you Android pho
 
 or use the console and run
 ```bash
-appc run -p android -T device
+ti build -p android -T device
 ```
 
 ![first screen](images/app_first_screen.png)
@@ -246,11 +248,10 @@ That's it for the short introduction.
 ## Create a new - clean project
 
 When you create a new project the default template will already add some code to the project. The following steps can be used to create a blank project:
-1. `appc new`
+1. `ti create` go into the folder and run `alloy new`
 2. open `tiapp.xml` and
-  1. remove all `<property>` lines with `name=acs-*`, `appc-org-id` and `appc-creator-user-id` (if you don't want to use the Appcelerator Cloud). You need to keep the `appc-app-id`!
-  2. set ` <analytics>` to `false` (if you don't want to use Appcelerator Analytics)
-  3. remove `<module platform="commonjs">ti.cloud</module>`
+  1. set ` <analytics>` to `false` (if you don't want to use Appcelerator Analytics)
+  2. remove `<module platform="commonjs">ti.cloud</module>`
 3. open `app/alloy.js` and remove everything
 4. remove the `doClick()` function from `app/controllers/index.js`
 5. remove the `<Label>` row from `app/views/index.xml`

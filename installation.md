@@ -269,9 +269,8 @@ For this tutorial we are just creating an empty Alloy app using CLI and Atom.
 
 Open a new terminal and add the following :
 ~~~ bash
-appc new
+ti create
 ~~~
-(for the OSS you change `appc new` to `ti create`).
 
 You will see a menu where you can select "Native app - Titanium SDK - set a project name - set an app id".
 For the beginning, say `no` to the Test-service and Hyperloop.

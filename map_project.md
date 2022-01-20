@@ -27,7 +27,9 @@ A feature that many apps have in common is a map with annotations. This tutorial
 
 We will start with an empty Alloy project.
 ```bash
-appc new
+ti create
+# go into the folder
+alloy new
 ```
 Have a look at the last section of the [first tutorial](./first_app.md#create-a-new---clean-project).
 
@@ -101,7 +103,7 @@ In your `index.xml` we place a ``<Module>` element that is connected to the Map 
 </Alloy>
 ```
 
-If you run your project on your phone `appc ti build -p android  -T device` you will see a fullscreen map.
+If you run your project on your phone `ti build -p android  -T device` you will see a fullscreen map.
 
 ## Style the map
 The map view has many properties you can change to adjust the look and feel. For a full overview have a look at the properties in the documentation: http://docs.appcelerator.com/platform/latest/#!/api/Modules.Map.View

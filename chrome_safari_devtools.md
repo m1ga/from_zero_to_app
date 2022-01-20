@@ -14,7 +14,7 @@ Sometimes you have an error in your app where you don't know why and it is hard 
 In a Titanium app you can add `--debug-host localhost:8989` to your build command to start a debug listener.
 
 ```bash
-appc run -p android  -T device --debug-host localhost:8989
+ti build -p android  -T device --debug-host localhost:8989
 ```
 
 When the app starts up it will freeze at the Splashscreen and you will see an URL it the console:

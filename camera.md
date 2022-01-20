@@ -22,7 +22,9 @@ Another must have feature in an app is to access the camera and take pictures or
 
 We will start with an empty Alloy project.
 ```bash
-appc new
+ti create
+# go into the folder
+alloy new
 ```
 Have a look at the last section of the [first tutorial](./first_app.md#create-a-new---clean-project).
 
