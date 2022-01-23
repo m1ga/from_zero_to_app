@@ -101,6 +101,10 @@ ___
 
 #### Quick install
 
+You can use this <a href="https://gist.github.com/m1ga/7c139716704fa81d11ca6f89c22e34d3">PowerShell file</a> to install all tools. Run it in a admin PowerShell and make sure to enable the Windows `dev mode` in the Windows settings.
+
+Manual way:
+
 * update/install the CLI (admin command prompt): npm i -g titanium alloy appcelerator
 * enable "dev mode" in Windows in the security settings to run node scripts
 * `ti sdk install 10.1.1.GA`  to have the latest SDK
