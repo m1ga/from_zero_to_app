@@ -40,7 +40,7 @@ Have a look at the last section of the [first tutorial](./first_app.md#create-a-
 
 ## Requirements
 
--   [Firebase Core](https://github.com/hansemannn/titanium-firebase) Module for Android / iOS
+-   [Firebase Core](https://github.com/hansemannn/titanium-firebase) Module for Android / iOS (only needed for iOS)
 -   [Firebase Cloud Messaging](https://github.com/hansemannn/titanium-firebase-cloud-messaging) Module for Android / iOS
 
 ## Firebase setup
@@ -79,27 +79,24 @@ Download the modules and update your `tiapp.xml`:
 
 ```xml
 <modules>
-	<module platform="android" version="11.0.40">ti.playservices</module>
-	<module>firebase.core</module>
+	<module platform="android">ti.playservices</module>
+	<module platform="iphone">firebase.core</module>
 	<module>firebase.cloudmessaging</module>
 </modules>
 ```
 
-```xml
-<property name="ti.android.bug2373.finishfalseroot" type="bool">true</property>
-```
-(not needed for SDK >= 8.0.0)
-
 ## Code setup
 
-At first you need to add the Firebase Core module and load the config file:
+For iOS you will need to add the Firebase Core module and load the config file:
 
 ```javascript
 // Require the Firebase Core module
-var FirebaseCore = require('firebase.core');
-FirebaseCore.configure();	// default google-services.json/GoogleService-Info.plist will be used
+if (OS_IOS) {
+  var FirebaseCore = require('firebase.core');
+  FirebaseCore.configure();	// default google-services.json/GoogleService-Info.plist will be used
+}
 ```
-
+Android will use gradle to load the google-service.json automatically.<br/>
 Then we add the Firebase Cloud Messaging module:
 
 ```javascript
