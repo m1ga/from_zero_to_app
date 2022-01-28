@@ -13,16 +13,16 @@ Extend you app with Firebase push notifications
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [From zero to app](#from-zero-to-app)
-  - [Ah, push it](#ah-push-it)
-  - [Project setup](#project-setup)
-  - [Requirements](#requirements)
-  - [Firebase setup](#firebase-setup)
-  - [XML setup](#xml-setup)
-  - [Code setup](#code-setup)
-  - [Test it](#test-it)
-  - [Notification types](#notification-types)
-  - [Advanced topics](#advanced-topics)
-    - [Android: custom sound](#android-custom-sound)
+	- [Ah, push it](#ah-push-it)
+	- [Project setup](#project-setup)
+	- [Requirements](#requirements)
+	- [Firebase setup](#firebase-setup)
+	- [XML setup](#xml-setup)
+	- [Code setup](#code-setup)
+	- [Test it](#test-it)
+	- [Notification types](#notification-types)
+	- [Advanced topics](#advanced-topics)
+		- [Android: custom sound](#android-custom-sound)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -66,10 +66,10 @@ For iOS we need to upload a p8 file.
 - Go to the project settings - Cloud messaging:<br/>![create1](images/push_ios_1.png)
 - Scroll down to the iOS app configurations and click upload (inside the APNs section):<br/>![create1](images/push_ios_2.png)
 - create a APNs file:
-  - go to the Apple provisioning profile center and create a new "Key":<br/>![create1](images/push_ios_5.png)
-  - get the key id for later<br/>![create1](images/push_ios_6.png)
-  - get the team id (link is inside the ? bubble of the upload form below):<br/>![create1](images/push_ios_4.png)
-  - download the file
+	- go to the Apple provisioning profile center and create a new "Key":<br/>![create1](images/push_ios_5.png)
+	- get the key id for later<br/>![create1](images/push_ios_6.png)
+	- get the team id (link is inside the ? bubble of the upload form below):<br/>![create1](images/push_ios_4.png)
+	- download the file
 - Add your p8 file and fill in the key and team id:<br/>![create1](images/push_ios_3.png)
 
 
@@ -92,8 +92,8 @@ For iOS you will need to add the Firebase Core module and load the config file:
 ```javascript
 // Require the Firebase Core module
 if (OS_IOS) {
-  var FirebaseCore = require('firebase.core');
-  FirebaseCore.configure();	// default google-services.json/GoogleService-Info.plist will be used
+	var FirebaseCore = require('firebase.core');
+	FirebaseCore.configure();	// default google-services.json/GoogleService-Info.plist will be used
 }
 ```
 Android will use gradle to load the google-service.json automatically.<br/>
@@ -123,6 +123,16 @@ if (OS_IOS) {
 		]
 	});
 } else {
+	const channel = Ti.Android.NotificationManager.createNotificationChannel({
+			id: 'default',
+			name: 'Default channel',
+			importance: Ti.Android.IMPORTANCE_DEFAULT,
+			enableLights: true,
+			enableVibration: true,
+			showBadge: true
+	});
+	// if you use a custom id you have to set the same to the `channelId` in you php send script!
+	fcm.notificationChannel = channel;
 	// Register for Firebase Cloud Messaging
 	fcm.registerForPushNotifications();
 }
@@ -156,35 +166,35 @@ An easy test for FCM notifications is to use this little PHP script and execture
 
 ```php
 <?php
-    $url = 'https://fcm.googleapis.com/fcm/send';
+		$url = 'https://fcm.googleapis.com/fcm/send';
 
-    $fields = [
-        'to' => 'DEVICE_TOKEN', // or topic: /topics/testTopic
-        'notification' => [
-            'title' => 'TiFirebaseMessaging',
-            'body' => 'Message received'
-        ],
-        'data' => [
-            'key1' => 'value1',
-            'key2' => 'value2'
-        ]
-    ];
+		$fields = [
+				'to' => 'DEVICE_TOKEN', // or topic: /topics/testTopic
+				'notification' => [
+						'title' => 'TiFirebaseMessaging',
+						'body' => 'Message received'
+				],
+				'data' => [
+						'key1' => 'value1',
+						'key2' => 'value2'
+				]
+		];
 
-    $headers = [
-        'Authorization: key=SERVER_ID_FROM_FIREBASE_SETTIGNS_CLOUD_MESSAGING', 'Content-Type: application/json'
-    ];
-    $ch = curl_init();
+		$headers = [
+				'Authorization: key=SERVER_ID_FROM_FIREBASE_SETTIGNS_CLOUD_MESSAGING', 'Content-Type: application/json'
+		];
+		$ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_POST, true);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
 
-    $result = curl_exec($ch);
+		$result = curl_exec($ch);
 
-    echo $result;
-    curl_close($ch);
+		echo $result;
+		curl_close($ch);
 ?>
 ```
 
@@ -229,7 +239,7 @@ e.g. for `sound.mp3`:
 
 ```javascript
 fcm.createNotificationChannel({
-    sound: 'sound'
+		sound: 'sound'
 });
 ```
 ```php
