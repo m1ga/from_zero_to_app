@@ -40,12 +40,12 @@ Currently you'll have to enable to use the `ti` CLI in the editor packages.
 
 ### Atom
 
-In Atom you go to the package settings and enable `Use ti commands`:
+In Atom you go to the package settings and enable `Use ti commands`:<br/>
 <img src="./images/ti_atom.png"/>
 
 ### VSCode
 
-In VSCode you enable 'Use Ti' in the extensions settings:
+In VSCode you enable 'Use Ti' in the extensions settings:<br/>
 <img src="./images/ti_vscode.png"/>
 
 ## Modules
