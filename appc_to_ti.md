@@ -33,3 +33,21 @@ If you want to create a new app you should use the open-source CLI:
 ti create
 ```
 and follow that menu. Then inside that folder run `alloy new` to convert the classic app to an Alloy app.
+
+## Editor
+
+Currently you'll have to enable to use the `ti` CLI in the editor packages.
+
+### Atom
+
+In Atom you go to the package settings and enable `Use ti commands`:
+<img src="./images/ti_atom.png"/>
+
+### VSCode
+
+In VSCode you enable 'Use Ti' in the extensions settings:
+<img src="./images/ti_vscode.png"/>
+
+## Modules
+
+If you use (old) Appcelerator modules you'll have to either remove them and replace them with free ones or check `https://github.com/appcelerator-modules/` if the module is open source now and replace it with that version.
