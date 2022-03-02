@@ -38,17 +38,7 @@ and follow that menu. Then inside that folder run `alloy new` to convert the cla
 
 ## Editor
 
-Currently you'll have to enable to use the `ti` CLI in the editor packages.
-
-### Atom
-
-In Atom you go to the package settings and enable `Use ti commands`:<br/>
-<img src="./images/ti_atom.png"/>
-
-### VSCode
-
-In VSCode you enable 'Use Ti' in the extensions settings:<br/>
-<img src="./images/ti_vscode.png"/>
+As of March 2nd 2022 the editor packages will now only use the `ti` and `alloy` CLI's. If your package is still using the `appc` CLI please check for extension updates.
 
 ## Modules
 
