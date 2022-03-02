@@ -26,7 +26,7 @@ You can either look at `ti --help` or use an IDE (Atom or VSCode). Both editor p
 
 The tiapp.xml contains a `<guid>` that is registered at Appcelerator. Currently you have to generate a new GUID e.g. with https://www.guidgenerator.com/ to switch from `appc` to `ti`. Once the server/service is gone it doesn't matter. But currently you have to change that GUID.<br/>
 Another entry is `<analytics>false</analytics>`. Set it false and use a different anlytics module if you'll need it.<br/>
-And if you have other `<appc-...>` nodes at the end of your xml you can remove them. Again: only if you don't use the services at the moment!
+And if you have other `<appc-...>` or `<property name="appc-..."">` nodes at the end of your xml you can remove them. Again: only if you don't use the services at the moment!
 
 ## Create a new app
 
