@@ -1,4 +1,4 @@
-# [From zero to app](https://github.com/m1ga/from_zero_to_app)
+# [From zero to app](https://fromzerotoapp.com)
 
 ## How to install Appcelerator Titanium
 
@@ -87,12 +87,14 @@ n lts
 * Download Android SDK ("Command line tools only"): https://developer.android.com/studio#downloads
 * Unzip Android SDK and run android to install SDK
 * adjust you .bash_profile:
+
 ```bash
 export PATH=$PATH:$HOME/android-sdk-linux/tools:$HOME/android-sdk-linux/platform-tools:/usr/java/latest/bin
 export ANDROID_SDK=$HOME/android-sdk-linux
 
 export JAVA_HOME=/usr/java/latest # fedora
 ```
+
 * run `source .bash_profile` to update the current session
 
 ___
@@ -114,11 +116,11 @@ Manual way:
 * restart command prompt
 
 #### Node.js
-Go to https://nodejs.org/en/download/ and download NodeJS v14.x.
-If you already have a different version installed you can use nvw-windows (https://github.com/coreybutler/nvm-windows/releases) to change this version to v14.x.
+Go to https://nodejs.org/en/download/ and download NodeJS v16.x.
+If you already have a different version installed you can use nvw-windows (https://github.com/coreybutler/nvm-windows/releases) to change this version to v16.x.
 ~~~ bash
-nvm install 14   # install a new version with nvm
-nvm use 14       # set it
+nvm install 16   # install a new version with nvm
+nvm use 16       # set it
 ~~~
 
 #### Java JDK
@@ -130,6 +132,8 @@ ___
 ### macOS
 
 #### Java JDK
+
+You can use brew to install openjdk `brew install openjdk@11`.
 
 List available Java JDK installations:
 ```
@@ -144,6 +148,9 @@ and put that in your `.bash_profile` or `.zprofile`
 ```
 export JAVA_HOME=$(/usr/libexec/java_home -v 16)
 ```
+
+If you are using a <b>M1 Mac</b> you have to use this version: <a href="https://github.com/microsoft/openjdk-aarch64/releases/tag/jdk-16.0.2-ga">openjdk-aarch64</a>
+Homebrew's version only goes up to v11 and Oracle's v17 is not supported.
 
 #### Node.js
 
