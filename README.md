@@ -40,12 +40,11 @@ At the time this tutorial was written the current version of the needed tools ar
 
 | Tool | Version |
 | --- | --- |
-| JDK | 1.8.0 (JDK 8; OpenJDK is supported, too) |
-| NodeJS | v12.16.1 |
-| Titanium SDK | 9.2.1.GA |
-| Appcelerator CLI | 8.1.1 |
-| Titanium CLI |5.2.5 |
-| Alloy | 1.15.2 |
+| OpenJDK | 11 |
+| NodeJS | v16.14.0 |
+| Titanium SDK | 10.1.1.GA |
+| Titanium CLI |5.4.1 |
+| Alloy | 1.17.4 |
 
 It will be updated and tested with future version. If you find anything that is not working anymore please file an issue.
 
