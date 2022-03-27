@@ -14,22 +14,18 @@ This tutorial will get you started setting up Appcelerator Titanium and use it i
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Installing Appcelerator Titanium](#installing-appcelerator-titanium)
-  - [Linux](#linux)
-    - [Fedora](#fedora)
-    - [Ubuntu](#ubuntu)
-    - [For all Distros (if you don't have Node.js v10.x)](#for-all-distros-if-you-dont-have-nodejs-v10x)
-  - [Windows](#windows)
-    - [Node.js](#nodejs)
-    - [Java JDK](#java-jdk)
-  - [macOS](#macos)
-    - [Java JDK](#java-jdk-1)
-    - [Node.js](#nodejs-1)
+- [General installation](#general-installation)
+  - [Node.js](#nodejs)
+  - [Java](#java)
   - [Android SDK](#android-sdk)
+- [Platform specific](#platform-specific)
+  - [Linux](#linux)
+  - [Windows](#windows)
+    - [Powershell](#powershell)
+    - [Java](#java-1)
+  - [macOS](#macos)
     - [Android Studio](#android-studio)
-    - [manual way](#manual-way)
-- [Appcelerator Titanium SDK / CLI](#axway-titanium-sdk--cli)
-  - [Free Version](#free-version)
-  - [Open Source Version](#open-source-version)
+    - [Java JDK](#java-jdk)
 - [Install Atom (and some useful Packages)](#install-atom-and-some-useful-packages)
   - [Windows / macOS:](#windows--macos)
   - [Linux (Fedora):](#linux-fedora)
@@ -62,117 +58,45 @@ The main parts are installed using the node.js package manager 'npm'. Check http
 
 ___
 
-### Linux
 
-#### Fedora
+## General installation
 
-If you are using Fedora 26+ you can run the following commands to get the needed libraries:
-```bash
-# install tools and libraries
-sudo dnf install nodejs npm git gcc glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686 java-11-openjdk
-```
-#### Ubuntu
-``` bash
-sudo apt-get install nodejs npm git gcc  gcc-multilib openjdk-11-jdk android-tools-adb
-```
+The following parts are necessary to run Titanium:
+* node.js v16
+* titanium / alloy node packages
+* java jdk (11 or 16)
+* xcode
+* Android SDK (we'll use Android Studio to install everything)
 
-#### For all Distros (if you don't have Node.js v14.x)
-If you do not have node v 14.x already you can up/downgrade with `n`
-``` bash
-# install npm version 14.x
-npm install -g n
-n lts
-```
+### Node.js
 
-* Download Android SDK ("Command line tools only"): https://developer.android.com/studio#downloads
-* Unzip Android SDK and run android to install SDK
-* adjust you .bash_profile:
+At first you need node.js v16 (https://nodejs.org/). After that you can use `npm` to install the packages as a global package:
 
 ```bash
-export PATH=$PATH:$HOME/android-sdk-linux/tools:$HOME/android-sdk-linux/platform-tools:/usr/java/latest/bin
-export ANDROID_SDK=$HOME/android-sdk-linux
-
-export JAVA_HOME=/usr/java/latest # fedora
+npm i -g titanium alloy
 ```
 
-* run `source .bash_profile` to update the current session
-
-___
-
-### Windows
-
-#### Quick install
-
-You can use this <a href="https://gist.github.com/m1ga/7c139716704fa81d11ca6f89c22e34d3">PowerShell file</a> to install all tools. Run it in a admin PowerShell and make sure to enable the Windows `dev mode` in the Windows settings.
-
-Manual way:
-
-* update/install the CLI (admin command prompt): npm i -g titanium alloy appcelerator
-* enable "dev mode" in Windows in the security settings to run node scripts
-* `ti sdk install 10.1.1.GA`  to have the latest SDK
-* download OpenJDK from https://jdk.java.net/archive (11.0.2)
-* extract the ZIP to e.g. `c:\programms\java\jdk-11.0.2`
-* set system JAVA_HOME variable to the same folder
-* restart command prompt
-
-#### Node.js
-Go to https://nodejs.org/en/download/ and download NodeJS v16.x.
-If you already have a different version installed you can use nvw-windows (https://github.com/coreybutler/nvm-windows/releases) to change this version to v16.x.
-~~~ bash
-nvm install 16   # install a new version with nvm
-nvm use 16       # set it
-~~~
-
-#### Java JDK
-
-Download and install JDK 11 from http://www.oracle.com/technetwork/java/javase/downloads/index.html and set the JAVA_HOME env variable inside the windows advanced system settings (e.g. C:\Program Files\Java\jdk11)
-
-___
-
-### macOS
-
-#### Java JDK
-
-You can use brew to install openjdk `brew install openjdk@11`.
-
-List available Java JDK installations:
+Then you can use
 ```
-/usr/libexec/java_home -V
+ti sdk install latest
 ```
+to install the latest Titanium SDK.
 
-select a version
-```
-export JAVA_HOME=$(/usr/libexec/java_home -v <JdkVersionYouWant>)
-```
-and put that in your `.bash_profile` or `.zprofile`
-```
-export JAVA_HOME=$(/usr/libexec/java_home -v 16)
-```
 
-If you are using a <b>M1 Mac</b> you have to use this version: <a href="https://github.com/microsoft/openjdk-aarch64/releases/tag/jdk-16.0.2-ga">openjdk-aarch64</a>
-Homebrew's version only goes up to v11 and Oracle's v17 is not supported.
+### Java
 
-#### Node.js
-
-- Fresh install: Go to [Nodejs.org](https://nodejs.org/en/download/) and download the v16.x (LTS).
-- Upgrade: Install the Node version manager `n` and update to the LTS:
-~~~ bash
-npm install -g n
-n lts
-~~~
+Install JDK (e.g. openjdk) 11 or 16.
 
 
 ### Android SDK
 
 The Android SDK is necessary if you want to compile an Android app. There are two ways to install it:
 
-#### Android Studio
-Download Android Studio and let it handle the SDK install.
+<b>Android Studio</b>
+Download <a href="https://developer.android.com/studio">Android Studio</a> and let it handle the SDK install.
 If you are using the latest version of Android Studio to fetch the SDK and the needed tools make sure to uncheck `Hide Obsolete packages` and install the `SDK tools`. You might also need to copy the content from `/platform-tools/platform-tools/bin` to `/platform-tools`.
 
-Also if you use macOS Big Sur you'll need to run `defaults write com.google.android.studio AppleWindowTabbingMode manual` in a console so Android Studio 4.1.2 won't freeze when you create an AVD or download extra SDKs.
-
-#### manual way
+<details><summary><b>manual way</b></summary>
 
 Check https://github.com/appcelerator/titanium_mobile/blob/9_0_X/android/package.json#L28 for the current supported versions.
 Go to https://developer.android.com/studio#cmdline-tools and download the ZIP for your platform.
@@ -198,29 +122,82 @@ unzip it to the android folder from before.
 Add the following paths to the PATH env variable:
 * C:\android\
 * C:\android\platform-tools
+</details>
+---
 
-___
+## Platform specific
 
-## Appcelerator Titanium SDK / CLI
+### Linux
 
-Open a console and run the following command to install the tools:
+If you are using <b>Fedora 26+</b> you can run the following commands to get the needed libraries:
+```bash
+# install tools and libraries
+sudo dnf install nodejs npm git gcc glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686 java-11-openjdk
+```
 
-~~~ bash
-[sudo] npm install -g titanium alloy appcelerator
-~~~
+<b>Ubuntu</b> looks like this:
+``` bash
+sudo apt-get install nodejs npm git gcc  gcc-multilib openjdk-11-jdk android-tools-adb
+```
 
-After that we need to install the SDK.
+Adjust you .bash_profile:
 
-### Open Source Version
-You can run
-~~~ bash
-titanium sdk install 10.1.1.GA
-~~~
-to get the SDK and then
-~~~ bash
- ti config wizard
- ~~~
- to finish the setup. You can check the latest GA version by going to the [Titanium Github](https://github.com/appcelerator/titanium_mobile/releases) to select the latest one.
+```bash
+export PATH=$PATH:$HOME/android-sdk-linux/tools:$HOME/android-sdk-linux/platform-tools:/usr/java/latest/bin
+export ANDROID_SDK=$HOME/android-sdk-linux
+
+export JAVA_HOME=/usr/java/latest # fedora
+```
+
+and run `source .bash_profile` to update the current session
+
+### Windows
+
+#### Powershell
+
+You can use this <a href="https://gist.github.com/m1ga/7c139716704fa81d11ca6f89c22e34d3">PowerShell file</a> to install all tools. Run it in a admin PowerShell and make sure to enable the Windows `dev mode` in the Windows settings.
+
+<details><summary><b>manual way</b></summary>
+
+* enable "dev mode" in Windows in the security settings to run node scripts
+* download OpenJDK from https://jdk.java.net/archive (11.0.2)
+* extract the ZIP to e.g. `c:\programms\java\jdk-11.0.2`
+* set system JAVA_HOME variable to the same folder
+* restart command prompt
+</details>
+
+#### Java
+
+Download and install JDK 11 from http://www.oracle.com/technetwork/java/javase/downloads/index.html and set the JAVA_HOME env variable inside the windows advanced system settings (e.g. C:\Program Files\Java\jdk11)
+
+
+
+### macOS
+
+#### Android Studio
+
+If you use macOS Big Sur you'll need to run `defaults write com.google.android.studio AppleWindowTabbingMode manual` in a console so Android Studio 4.1.2 won't freeze when you create an AVD or download extra SDKs.
+
+#### Java JDK
+
+You can use `brew install openjdk@11` or if you use a M1 Mac you can use the version from https://github.com/microsoft/openjdk-aarch64/releases/tag/jdk-16.0.2-ga
+
+List available Java JDK installations:
+```
+/usr/libexec/java_home -V
+```
+
+select a version
+```
+export JAVA_HOME=$(/usr/libexec/java_home -v <JdkVersionYouWant>)
+```
+and put that in your `.bash_profile` or `.zprofile`
+```
+export JAVA_HOME=$(/usr/libexec/java_home -v 16)
+```
+
+If you are using a <b>M1 Mac</b> you have to use this version: <a href="https://github.com/microsoft/openjdk-aarch64/releases/tag/jdk-16.0.2-ga">openjdk-aarch64</a>
+Homebrew's version only goes up to v11 and Oracle's v17 is not supported.
 
 ___
 
@@ -383,9 +360,7 @@ It allows you to quickly test your app on multiple devices at the same time and 
 
 ### Liveview
 
-**Note:** As of SDK 8.0.0 Liveview is now part of the SDK, it is not recommended or supported to install Liveview via npm as this will conflict with the SDK version.
-
-Now you can add `--liveview` to compile with liveview from command line
+You can add `--liveview` to compile with liveview from command line
 
 ___
 
@@ -394,16 +369,13 @@ ___
 Here are some useful Titanium resources:
 
 * **Ti-Slack:**  http://tislack.org/ **Join the community!**
-* Axway Appcelerator: http://appcelerator.com
-* Axway Community: https://community.appcelerator.com/
+* TiDev: https://tidev.io/
 * TiShadow: https://github.com/dbankier/TiShadow
 * Atom: http://atom.io
 * gitt.io: http://gitt.io/
-* code examples: https://github.com/appcelerator/kitchensink-v2/
-* official documentation/guidelines: http://docs.appcelerator.com/platform/latest/#!/guide
-* official blog: https://devblog.axway.com/mobile-apps/
-* official tutorials: https://tutorials.axway.com/
-* official wiki: https://wiki.appcelerator.org/display/guides2/Hello+Titanium+App+Tutorial
+* code examples: https://github.com/tidev/kitchensink-v2/
+* official documentation/guidelines: https://titaniumsdk.com/api/
+* from zero to app: https://fromzerotoapp.com/
 
 
 ## Contact me
