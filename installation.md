@@ -123,6 +123,7 @@ Add the following paths to the PATH env variable:
 * C:\android\
 * C:\android\platform-tools
 </details>
+
 ---
 
 ## Platform specific
