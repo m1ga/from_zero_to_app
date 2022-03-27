@@ -30,9 +30,8 @@ For more tutorials, links, modules and more visit: <a href="https://fromzerotoap
 * [Enhancing Titanium: Speeding up data binding](https://medium.com/all-titanium/enhancing-titanium-speeding-up-data-binding-5adf46f73760)
 * [Quick Tip: Appcelerator Titanium Dark-Mode colors](https://dev.to/miga/quick-tip-appcelerator-titanium-dark-mode-colors-1n7g)
 * [Using Android Studio to develop Titanium modules](https://dev.to/miga/using-android-studio-to-develop-titanium-modules-2jc4)
-* [Hyperloop examples](https://github.com/appcelerator/hyperloop-examples)
+* [Hyperloop examples](https://github.com/tidev/hyperloop-examples)
 * [Stackoverflow](https://stackoverflow.com/questions/tagged/appcelerator-titanium)
-* [Axway Developer - Youtube](https://www.youtube.com/user/Appcelerator/videos)
 
 
 ## Requirements

@@ -80,7 +80,7 @@ so we can check that the module is working inside the app.
 Now it is time to build the module and copy the zip into the Titanium app.
 
 Inside the app you place the aar files into `./app/platform/android` and Titanium will automatically include all AARs/JARs in that folder.
-Titanium's [build system copies](https://github.com/appcelerator/titanium_mobile/blob/master/android/cli/commands/_build.js#L2689-L2719) the `./platform/android` file tree to the generated Android app `./build/android/app/src/main` folder. Those AAR/JAR files are included by the global [app build.gradle](https://github.com/appcelerator/titanium_mobile/blob/master/android/templates/build/app.build.gradle#L98)
+Titanium's [build system copies](https://github.com/tidev/titanium_mobile/blob/master/android/cli/commands/_build.js#L2689-L2719) the `./platform/android` file tree to the generated Android app `./build/android/app/src/main` folder. Those AAR/JAR files are included by the global [app build.gradle](https://github.com/tidev/titanium_mobile/blob/master/android/templates/build/app.build.gradle#L98)
 
 In your code file add this:
 

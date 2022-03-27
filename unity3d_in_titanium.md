@@ -84,7 +84,7 @@ Now you import the exported project into Android Studio to create a library inst
 * add this to the controller
 
 ```javascript
-const unity = require("com.unity.game.UnityPlayerActivity");
+//const unity = require("com.unity.game.UnityPlayerActivity");
 var intent = Ti.Android.createIntent({
 	className: "com.unity.game.UnityPlayerActivity",
 });

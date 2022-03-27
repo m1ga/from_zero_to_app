@@ -98,7 +98,7 @@ If you are using the latest version of Android Studio to fetch the SDK and the n
 
 <details><summary><b>manual way</b></summary>
 
-Check https://github.com/appcelerator/titanium_mobile/blob/9_0_X/android/package.json#L28 for the current supported versions.
+Check https://github.com/tidev/titanium_mobile/blob/10_0_X/android/package.json#L29-L34 for the current supported versions.
 Go to https://developer.android.com/studio#cmdline-tools and download the ZIP for your platform.
 
 Unzip and copy it to a folder (e.g. C:\android or /home/user/android). Then go into the folder `\tools\bin` and run
