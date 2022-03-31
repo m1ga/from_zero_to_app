@@ -38,7 +38,8 @@ and follow that menu. Then inside that folder run `alloy new` to convert the cla
 
 ## Editor
 
-As of March 2nd 2022 the editor packages will now only use the `ti` and `alloy` CLI's. If your package is still using the `appc` CLI please check for extension updates.
+Since March 2nd 2022 the editor packages will now only use the `ti` and `alloy` CLI's. If your package is still using the `appc` CLI please check for extension updates.
+If you have any issues with the plug-in (e.g. update check doesn't work) you should run `sudo npm i -g titanium alloy` outside of VSCode/Atom and restart the editor. 
 
 ## Modules
 
