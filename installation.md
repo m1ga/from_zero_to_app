@@ -218,7 +218,7 @@ The official Appcelerator IDE package is called:
 
 |Name | Type 	|  Features 	|
 |------------------------------	|---------------	|--------------
-| [Appcelerator Titanium IDE](https://atom.io/packages/appcelerator-titanium) | IDE | Official Atom package by Axway
+| [Appcelerator Titanium IDE](https://atom.io/packages/appcelerator-titanium) | IDE | Official Atom package
 
 There are some other (older) packges which are not needed when installing the official one. But it is worth mentioning them:
 

@@ -21,8 +21,8 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-In this tutorial we will create a first `Hello World` app with Axway Appcelerator.
-We will use the command line tools in combination with Atom and not [Appcelerator Studio](https://platform.appcelerator.com/) to create and compile our projects. But all the code is working with Appcelerator Studio and other IDEs, too!
+In this tutorial we will create a first `Hello World` app with Appcelerator Titanium.
+We will use the command line tools in combination with Atom to create and compile our projects. But all the code is working with Appcelerator Studio and other IDEs, too!
 
 ## Project setup
 To create a new project (a so called Alloy project) we run the following command:
@@ -66,7 +66,7 @@ It looks like a lot at the beginning but the structure (MVC, model view controll
 As said before a new project already contains a demo app, so the /app/controllers/index.js, /app/styles/index.tss and /app/views/index.xml file contains some code. These are the first files that are executed when you run the app. The XML file describes the elements in you will see, the TSS file the look and feel (colors, position, width, height,…) and the JS file contains your code. If you create a new controller (e.g. to open a new window) it will generate the view and style automatically. So if you create a controller called "secondWindow" the files will be called: secondWindow.js, secondWindow.tss and secondWindow.xml inside the views/styles/controllers folder.
 
 ### Views / XML files
-The XML files inside the /views folder contain the components that are visible on your screen. These elements can be a Label to display text, a TextField to input text, an ImageView that shows an image or many other components like Maps, VideoPlayers, ….  Have a look at the KitchenSink Demo app by Appcelerator or the documentation at http://docs.appcelerator.com/platform/latest/#!/api (UI section) for a complete list of elements you can use. The first index.xml look like this:
+The XML files inside the /views folder contain the components that are visible on your screen. These elements can be a Label to display text, a TextField to input text, an ImageView that shows an image or many other components like Maps, VideoPlayers, ….  Have a look at the KitchenSink Demo app by Appcelerator or the documentation at https://titaniumsdk.com/api/ (UI section) for a complete list of elements you can use. The first index.xml look like this:
 ```xml
 <Alloy>
 	<Window class="container">
@@ -96,7 +96,7 @@ TSS files are similar to CSS files with some differences in the syntax. When you
 	}
 }
 ```
-As you can see you write `"#ID"`, `"TAG"` or `".CLASS"` followed by : and {}. Inside the curly brackets you write your styles separated by commas. The available properties are listed in the documentation whe you click on an UI component and look under the "properties" section. E.g. for a Label it would be: http://docs.appcelerator.com/platform/latest/#!/api/Titanium.UI.Label.
+As you can see you write `"#ID"`, `"TAG"` or `".CLASS"` followed by : and {}. Inside the curly brackets you write your styles separated by commas. The available properties are listed in the documentation whe you click on an UI component and look under the "properties" section. E.g. for a Label it would be: https://titaniumsdk.com/api/titanium/ui/label.html.
 Each tss file contains styles that are connected to the view with the same name. There is a special file called "app.tss" that is a global style file. All styles inside this file are applied to all views. For example you can put
 ```
 "Window": {
@@ -113,7 +113,7 @@ function doClick(e) {
 }
 $.index.open();
 ```
-To reference elements from the views you will use $.ID. Then you can access the properties and methods from this element. If you removed the <Label> line from the view you can also remove the doClick function from the controller. Leave the $.index.open() so it still opens the now empty window. All methods and events are listed at the API documentation at http://docs.appcelerator.com/platform/latest/#!/api.
+To reference elements from the views you will use $.ID. Then you can access the properties and methods from this element. If you removed the <Label> line from the view you can also remove the doClick function from the controller. Leave the $.index.open() so it still opens the now empty window. All methods and events are listed at the API documentation at https://titaniumsdk.com/api/.
 
 ## Getting started
 When you start a new app most of the time you have a layout or an idea in mind how the app should look like and what the features are you want to use it for. That is why we start in the view first and add the elements we want to show. After that we style them: move them around the screen, resize them and change colors. At the end we add the code so the user can interact with the app.  Our "Hello Word" app should display an image, text and a button. When you click the button a second window will appear with a text field the user can add some text and another button that will close the window again.
@@ -260,17 +260,15 @@ When you create a new project the default template will already add some code to
 Now you have a empty project! If you want to you can adjust the default templates to your defaults. Search for the `node_modules/alloy/templates/default` folder. E.g. on Linux it is located at `~/.appcelerator/install/7.0.2/package/node_modules/alloy/templates/default`.
 
 ## Where to go from here
-You have your first functional app that uses some of the basic structure of Appcelerator Titanium. Have a look at the [KitchenSink source code](https://github.com/appcelerator/kitchensink-v2/) and the [official API documentation ](http://docs.appcelerator.com/platform/latest/#!/api) which other elements you can use. All the UI elements have examples on how to use them inside the documentation. Play around with different components and combine them to match your app layout.
-There is also a growing community at http://tislack.org/ you can join to ask questions, show your apps, report bugs or search for jobs! And if you want to dig even deeper you can have a look at the [source code of Titanium](https://github.com/appcelerator/titanium_mobile) and add features if you miss something.
+You have your first functional app that uses some of the basic structure of Appcelerator Titanium. Have a look at the [KitchenSink source code](https://github.com/tidev/kitchensink-v2/) and the [official API documentation ](https://titaniumsdk.com/api/) which other elements you can use. All the UI elements have examples on how to use them inside the documentation. Play around with different components and combine them to match your app layout.
+There is also a growing community at http://tislack.org/ you can join to ask questions, show your apps, report bugs or search for jobs! And if you want to dig even deeper you can have a look at the [source code of Titanium](https://github.com/tidev/titanium_mobile) and add features if you miss something.
 
 ### Other ressources
 
-* Axway Appcelerator: http://appcelerator.com
-* Axway Community: https://community.appcelerator.com/
+* TiDev Inc.: https://tidev.io
 * gitt.io: http://gitt.io/
-* official blog: https://devblog.axway.com/mobile-apps/
-* official tutorials: https://tutorials.axway.com/
-* official wiki: https://wiki.appcelerator.org/display/guides2/Hello+Titanium+App+Tutorial
+* TiSlack: https://tidev.slack.com/
+* fromzerotoapp: https://fromzerotoapp.com
 
 ### Books
 

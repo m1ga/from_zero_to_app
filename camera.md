@@ -180,7 +180,7 @@ $.index.open();
 
 If you click the button now it will ask you for camera and storage permission the first time and then open the camera.
 
-The `showCamera()` method has some properties you can set to change some options and to get the image. For a full list check out: https://docs.appcelerator.com/platform/latest/#!/api/CameraOptionsType
+The `showCamera()` method has some properties you can set to change some options and to get the image. For a full list check out: https://titaniumsdk.com/api/structs/cameraoptionstype.html
 
 The most common option is the `success` callback. This will be called after the images was taken and you can get the actual image to show it in your app or store it.
 

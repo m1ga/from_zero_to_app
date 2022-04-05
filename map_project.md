@@ -35,7 +35,7 @@ Have a look at the last section of the [first tutorial](./first_app.md#create-a-
 
 ## Add the Map module
 
-The Map view is an external plug-in that is maintained by Axway and installed by default with when you download a Titanium SDK. To activate/include it inside your project you have to edit the `tiapp.xml` and add it to the modules section. Search for `<modules>` and at this:
+The Map view is an external plug-in that is maintained by TiDev and installed by default with when you download a Titanium SDK. To activate/include it inside your project you have to edit the `tiapp.xml` and add it to the modules section. Search for `<modules>` and at this:
 
 ```xml
 <modules>
@@ -106,7 +106,7 @@ In your `index.xml` we place a ``<Module>` element that is connected to the Map 
 If you run your project on your phone `ti build -p android  -T device` you will see a fullscreen map.
 
 ## Style the map
-The map view has many properties you can change to adjust the look and feel. For a full overview have a look at the properties in the documentation: http://docs.appcelerator.com/platform/latest/#!/api/Modules.Map.View
+The map view has many properties you can change to adjust the look and feel. For a full overview have a look at the properties in the documentation: https://titaniumsdk.com/api/modules/map/view.html
 
 One think you want to change is the initial location that will be visible. To do this you can change the `region` property and set it to a custom longitude/latitude and longitudeDelta/latitudeDelta (zooming factor).
 

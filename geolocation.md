@@ -155,4 +155,4 @@ function onHeading(returnObject){
 
 ### Documentation
 
-More information and properties can be found in the official documentation at https://docs.appcelerator.com/platform/latest/#!/api/Titanium.Geolocation
+More information and properties can be found in the official documentation at https://titaniumsdk.com/api/titanium/geolocation.html

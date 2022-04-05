@@ -16,7 +16,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-In a previous blog post Ewan Harris was talking about how to debug in VS Code (<a href="https://devblog.axway.com/mobile-apps/vs-code-debugging-for-titanium/" target="_blank">Debugging in VS Code</a>) but from time to time you have to use a WebView insider your and with an own little app inside. Normally you would debug the web application you run inside the WebView in a normal browser and then just include it in your app. It might work at first try but sometimes the WebView displays your HTML part differently than the browser on your phone and you have to debug the WebView inside your app. Luckily both Android and iOS allow you to do that.
+In a previous blog post Ewan Harris was talking about how to debug in VS Code (<a href="https://github.com/tidev/vscode-titanium/blob/master/doc/debugging.md" target="_blank">Debugging in VS Code</a>) but from time to time you have to use a WebView insider your and with an own little app inside. Normally you would debug the web application you run inside the WebView in a normal browser and then just include it in your app. It might work at first try but sometimes the WebView displays your HTML part differently than the browser on your phone and you have to debug the WebView inside your app. Luckily both Android and iOS allow you to do that.
 
 
 ## The app

@@ -3,7 +3,7 @@
 <span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span>
 
 To debug WebViews have a look at <a href="./debugging_webviews.md">Debugging WebViews</a>.<br/>
-If you are interested in debugging using VS Code have a look at <a href="https://devblog.axway.com/mobile-apps/vs-code-debugging-for-titanium/">https://devblog.axway.com/mobile-apps/vs-code-debugging-for-titanium/</a>
+If you are interested in debugging using VS Code have a look at <a href="https://github.com/tidev/vscode-titanium/blob/master/doc/debugging.md">https://github.com/tidev/vscode-titanium/blob/master/doc/debugging.md</a>
 
 ## Android
 
@@ -38,4 +38,4 @@ Now you can open files, set breakpoints and analyse variables:
 
 <img src="images/safari_2.png"/><br/>
 
-For more details visit: https://docs.appcelerator.com/platform/latest/#!/guide/Debugging_iOS_Apps_with_3rd-party_Tools
+For more details visit: https://titaniumsdk.com/guide/Titanium_SDK/Titanium_SDK_How-tos/Debugging_and_Profiling/Native_iOS_Debugging_and_Testing_Tools.html

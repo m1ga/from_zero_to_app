@@ -6,7 +6,7 @@ For more tutorials, links, modules and more visit: <a href="https://fromzerotoap
 <a href="https://fromzerotoapp.com">From zero to app</a> is a series of basic tutorials for Axway Appcelerator to create your first mobile app for Android and iOS using the power of JavaScript. You just need some basic JavaScript knowledge and a Linux, Windows or Mac (for iOS development). The tutorials will guide you from zero to your first app!
 
 ## Tutorials
-* **[Installation](./installation.md)** - How to install Axway Appcelerator.
+* **[Installation](./installation.md)** - How to install Appcelerator Titanium.
 * **[First app](./first_app.md)** - Your first app!
 * **[Map project](./map_project.md)** - Add a map with pins to your app.
 * **[Use the camera](./camera.md)** - Record pictures and videos in your app.
@@ -23,7 +23,6 @@ For more tutorials, links, modules and more visit: <a href="https://fromzerotoap
 
 ## External Tutorials
 
-* [Axway Blog posts](https://devblog.axway.com/)
 * [Medium posts about Titanium](https://medium.com/all-titanium)
 * [Ti.UI Basics: How to use AlertDialog in Alloy](https://medium.com/all-titanium/ti-ui-basics-how-to-use-alertdialog-in-alloy-1059c7d70278)
 * [Enhancing Titanium: How to set up Collections with DataBinding](https://medium.com/all-titanium/enhancing-titanium-how-to-set-up-collections-with-databinding-39573cd30911)
