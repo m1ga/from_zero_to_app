@@ -202,7 +202,7 @@ Homebrew's version only goes up to v11 and Oracle's v17 is not supported.
 
 #### XCode
 
-If you have issues with XCode check `Xcode preferences->locations->Command Line Tools` and make sure it is set.
+If you have issues with XCode like `Unable to find an iOS Simulator` check `Xcode preferences->locations->Command Line Tools` and make sure it is set.
 ___
 
 ## Install Atom (and some useful Packages)
