@@ -200,6 +200,9 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 16)
 If you are using a <b>M1 Mac</b> you have to use this version: <a href="https://github.com/microsoft/openjdk-aarch64/releases/tag/jdk-16.0.2-ga">openjdk-aarch64</a>
 Homebrew's version only goes up to v11 and Oracle's v17 is not supported.
 
+#### XCode
+
+If you have issues with XCode check `Xcode preferences->locations->Command Line Tools` and make sure it is set.
 ___
 
 ## Install Atom (and some useful Packages)
