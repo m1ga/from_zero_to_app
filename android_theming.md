@@ -4,6 +4,20 @@
 
 ## Android styling in Titanium using themes
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Create a theme](#create-a-theme)
+- [Use the theme](#use-the-theme)
+- [How to style elements](#how-to-style-elements)
+- [Examples](#examples)
+  - [Arrow / menu item in Actionbar](#arrow--menu-item-in-actionbar)
+  - [ListView headerTitle](#listview-headertitle)
+- [Other examples](#other-examples)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Titanium allows you to use normal Android themes to style your entire application and customize elements that don't expose properties to Titanium. Make sure to read the [official Titanium guide](https://titaniumsdk.com/guide/Titanium_SDK/Titanium_SDK_How-tos/User_Interface_Deep_Dives/Android_UI_Components_and_Conventions/Android_Themes.html) first how to setup your basic theme. In this tutorial I will show you some styling examples.
 
 _The good thing first_: you can search for native Android theme examples and put them into your theme file. _The "bad" part_: it can be very tricky to find the right style/parent property - even in native land! And since Titanium and most Android apps use Material now the chances are high that old stackoverflow posts or examples won't work anymore.
@@ -150,12 +164,12 @@ In your theme you can use them like this:
 <color name="ti_headerTitleColor">#ff0000</color>
 ```
 
-Result is:
+Result is:<br/>
 <img src="/images/android_theme02.png"/>
 
  https://github.com/tidev/titanium_mobile/discussions?discussions_q=theme
 
-### Other examles
+### Other examples
 
 If posted some other guides in the `Show and tell` section in the [Github discussions](https://github.com/tidev/titanium_mobile/discussions?discussions_q=theme)
 * [Custom color for Actionbar title/subtitle](https://github.com/tidev/titanium_mobile/discussions/13240)
