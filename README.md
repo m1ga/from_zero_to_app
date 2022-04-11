@@ -19,7 +19,7 @@ For more tutorials, links, modules and more visit: <a href="https://fromzerotoap
 * **[Android Modules: using local aar files](./android_modules_local_aar.md)** - How to use a local AAR file when creating an Android module.
 * **[Transfer your app from appc CLI to ti CLI](./appc_to_ti.md)** - Start use the open source CLI right away!
 * **[Appwrite + Appcelerator Titanium: A step by step guide](./appwrite_app.md)** - Connect an app with Appwrite.io
-
+* **[Android styling in Titanium using themes](./android_theming.md)** - Style your Android elements
 
 ## External Tutorials
 
