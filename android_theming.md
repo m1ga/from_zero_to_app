@@ -13,6 +13,8 @@
 - [How to style elements](#how-to-style-elements)
 - [Examples](#examples)
   - [Arrow / menu item in Actionbar](#arrow--menu-item-in-actionbar)
+  - [Toolbar (Titanium 10.2.0)](#toolbar-titanium-1020)
+  - [Actionbar (Titanium 10.2.0)](#actionbar-titanium-1020)
   - [ListView headerTitle](#listview-headertitle)
 - [Other examples](#other-examples)
 
@@ -107,6 +109,8 @@ To style the arrow or menu dots in the Actionbar you can use the following theme
 </style>
 ```
 
+<img src="/images/android_theme03.png"/>
+
 <b>Note:</b>
 Beginning with _10.2.0_ you can set a custom drawable as a `homeAsUpIndicator` (check https://github.com/tidev/titanium_mobile/pull/13149):
 
@@ -134,6 +138,117 @@ window.activity.onCreate = () => {
 };
 window.open();
 ```
+
+<hr/>
+
+#### Toolbar (Titanium 10.2.0)
+_note: will work with Titanium 10.1.1.GA too but the drawable won't be tinted_
+
+When you use a `Toolbar` and want to style the icon, arrow and text you can use the following example:
+
+index.xml
+```xml
+<Alloy>
+    <Window title="" customToolbar="toolbar" theme="AppTheme">
+        <Toolbar id="toolbar" title="Title" subtitle="Subtitle" barColor="#004F9F" width="Ti.UI.FILL" top="0" displayHomeAsUp="true" homeButtonEnabled="true"/>
+        <Menu >
+            <MenuItem icon="Titanium.App.Android.R.drawable.cogwheel" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS"/>
+        </Menu>
+    </Window>
+</Alloy>
+```
+
+and a `cogwheel.xml` file in `/app/platform/android/res/drawable/cogwheel.xml`:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="59.999998dp"
+    android:height="60.903094dp"
+    android:viewportWidth="59.999998"
+    android:tint="?attr/colorControlNormal"
+    android:viewportHeight="60.903094">
+
+    <path
+        android:fillColor="#ffffff"
+        android:strokeWidth="0.0592785"
+        android:pathData="M 26.880942,15.410922 c -0.302379,0 -0.755341,0.302531 -0.755341,0.604851 l -0.604851,4.08154 c -0.906959,0.302321 -1.662936,0.906043 -2.569895,1.510682 l -3.628143,-1.510682 c -0.45348,-0.151159 -0.75587,-3.76e-4 -1.058249,0.301944 l -3.023292,5.290278 c -0.15116,0.151161 5.88e-4,0.604475 0.302908,0.906795 l 3.173781,2.419405 c 0,0.45348 -0.150489,0.907007 -0.150489,1.511646 0,0.60464 -6.71e-4,1.057202 0.150489,1.510681 l -3.173781,2.569895 c -0.30232,0.302379 -0.302614,0.60538 -0.151454,0.907759 l 3.023292,5.290279 c 0.15116,0.151161 0.453256,0.302614 0.906795,0.151454 l 3.779597,-1.511646 c 0.755799,0.60464 1.66197,1.058166 2.56893,1.511646 l 0.604851,3.930087 c 0,0.302319 0.302825,0.603886 0.756306,0.603886 h 6.045619 c 0.302379,0 0.756305,-0.301625 0.756305,-0.603886 l 0.604851,-3.930087 c 0.90696,-0.45348 1.814095,-0.907006 2.569895,-1.511646 l 3.778633,1.511646 c 0.302379,0.15116 0.755575,-5.29e-4 0.906794,-0.302908 l 3.023292,-5.290278 c 0.15116,-0.30232 0.150925,-0.755635 -0.151454,-0.906795 l -3.476689,-2.419406 c 0,-0.453479 0.151454,-0.906041 0.151454,-1.510681 0,-0.604639 -2.94e-4,-1.058166 -0.151454,-1.511646 l 3.174746,-2.569894 c 0.302319,-0.30232 0.302614,-0.604475 0.151454,-0.906795 L 41.39255,20.247803 c -0.15116,-0.15116 -0.453256,-0.301649 -0.906795,-0.15049 l -3.779597,1.510682 c -0.7558,-0.604639 -1.662936,-1.057202 -2.569895,-1.510682 l -0.603886,-3.931051 c 0.15116,-0.453479 -0.302592,-0.75534 -0.604852,-0.75534 z m 3.023292,9.825216 c 2.872037,0 5.290278,2.419206 5.290278,5.291243 0,2.872038 -2.418241,5.290279 -5.290278,5.290279 -2.872038,0 -5.290279,-2.418241 -5.290279,-5.290279 0,-2.872037 2.418241,-5.291243 5.290279,-5.291243 z" />
+</vector>
+```
+
+default theme (we have to disable the actionbar to use a toolbar):
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="AppTheme" parent="Theme.Titanium.DayNight.NoTitleBar"></style>
+</resources>
+```
+<img src="/images/android_theme05.png"/>
+
+<br/><br/>
+Now we can use this theme to style each element:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="AppTheme" parent="Theme.Titanium.DayNight.NoTitleBar">
+		<item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+	</style>
+
+	<style name="Widget.App.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+    <!-- title color -->
+		<item name="titleTextColor">#f00</item>
+    <!-- sub title color -->
+		<item name="subtitleTextColor">#f0f</item>
+    <!-- elements -->
+		<item name="materialThemeOverlay">@style/ThemeOverlay.App.Toolbar</item>
+	</style>
+
+	<style name="ThemeOverlay.App.Toolbar" parent="">
+    <!-- element tint color -->
+		<item name="colorControlNormal">#ff0</item>
+	</style>
+
+</resources>
+```
+and we will get a wild color scheme:<br/>
+<img src="/images/android_theme04.png"/>
+
+<hr/>
+
+#### Actionbar (Titanium 10.2.0)
+_note: will work with Titanium 10.1.1.GA too but the drawable won't be tinted_
+
+If we have the same setup as above but with an Actionbar:
+```xml
+<Alloy>
+    <Window title="demoApp" customToolbar="toolbar" theme="AppTheme">
+        <ActionBar homeButtonEnabled="true" displayHomeAsUp="true"/>
+        <Menu >
+            <MenuItem id="menu1" icon="Titanium.App.Android.R.drawable.cogwheel" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" onClick="test"/>
+        </Menu>
+    </Window>
+</Alloy>
+```
+<img src="/images/android_theme07.png"/>
+<br/><br/>
+we can use this theme:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="AppTheme" parent="Theme.Titanium.DayNight">
+	</style>
+
+	<style name="MyActionBar" parent="@style/Theme.Titanium.DayNight">
+		<item name="colorControlNormal">#ff00ff</item>
+		<item name="android:background">#004F9F</item>
+		<item name="android:textColorPrimary">#ff0</item>
+	</style>
+</resources>
+```
+to get the same styling as with the Toolbar:
+<img src="/images/android_theme06.png"/>
+
+<hr/>
 
 #### ListView headerTitle
 
@@ -168,6 +283,7 @@ Result is:<br/>
 <img src="/images/android_theme02.png"/>
 
  https://github.com/tidev/titanium_mobile/discussions?discussions_q=theme
+
 
 ### Other examples
 
