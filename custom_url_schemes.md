@@ -18,12 +18,28 @@
 ```
 
 ```js
-Ti.App.addEventListener("resumed", function(event){
-  var data;
-  if (OS_IOS){
-    data = event.url;
-  } else {
-    data = Ti.Android.currentActivity.intent.data;
-  }
-}
+const win = Ti.UI.createWindow();
+const lbl = Ti.UI.createLabel();
+
+Ti.App.addEventListener("resume", function() {
+	var data;
+	if (OS_IOS) {
+		data = Ti.App.arguments.url;
+	} else {
+		data = Ti.Android.currentActivity.intent.data;
+	}
+	lbl.text = data;
+});
+
+win.addEventListener("open", function() {
+	var data;
+	if (OS_IOS) {
+		data = Ti.App.arguments.url;
+	} else {
+		data = Ti.Android.currentActivity.intent.data;
+	}
+	lbl.text = data;
+});
+win.add(lbl);
+win.open();
 ```
