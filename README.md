@@ -1,7 +1,7 @@
 # From zero to app
 For more tutorials, links, modules and more visit: <a href="https://fromzerotoapp.com">fromzerotoapp.com</a>.
 
-<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span>
+<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span> <a href="https://github.com/sponsors/m1ga"><img src="./images/gh_sponsor.png" title="Sponsor me"/></a>
 
 <a href="https://fromzerotoapp.com">From zero to app</a> is a series of basic tutorials for Axway Appcelerator to create your first mobile app for Android and iOS using the power of JavaScript. You just need some basic JavaScript knowledge and a Linux, Windows or Mac (for iOS development). The tutorials will guide you from zero to your first app!
 
