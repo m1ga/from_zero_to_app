@@ -6,7 +6,7 @@ This tutorial will get you started setting up Appcelerator Titanium and use it i
 
 ![main view](images/main_view.png)
 
-<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span> <iframe src="https://ghbtns.com/github-btn.html?user=m1ga&type=sponsor&size=large" frameborder="0" scrolling="0" width="180" height="30" title="GitHub"></iframe>
+<span class="badge-buymeacoffee"><a href="https://www.buymeacoffee.com/miga" title="donate"><img src="https://img.shields.io/badge/buy%20me%20a%20coke-donate-orange.svg" alt="Buy Me A Coke donate button" /></a></span> <a href="https://github.com/sponsors/m1ga"><img src="gh_sponsor.png" title="Sponsor me"/></a>
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
