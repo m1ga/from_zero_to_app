@@ -6,20 +6,23 @@ For more tutorials, links, modules and more visit: <a href="https://fromzerotoap
 <a href="https://fromzerotoapp.com">From zero to app</a> is a series of basic tutorials for Axway Appcelerator to create your first mobile app for Android and iOS using the power of JavaScript. You just need some basic JavaScript knowledge and a Linux, Windows or Mac (for iOS development). The tutorials will guide you from zero to your first app!
 
 ## Tutorials
-* **[Installation](./installation.md)** - How to install Appcelerator Titanium.
-* **[First app](./first_app.md)** - Your first app!
-* **[Map project](./map_project.md)** - Add a map with pins to your app.
-* **[Use the camera](./camera.md)** - Record pictures and videos in your app.
-* **[Ah, push it](./push.md)** - Extend you app with Firebase push notifications.
-* **[Where am I?](./geolocation.md)** - Use geolocation services in your app.
-* **[Debugging WebViews](./debugging_webviews.md)** - Debugging WebViews: see what's inside the WebView.
-* **[Basic App UIs](./basic_app_uis.md)** - Basic App UIs: from a basic window to complex native tab group.
-* **[Android Adaptive icons](./android_adaptive_icons.md)** - Android Adaptive Icons.
-* **[Debugging using Chrome/Safari DevTools](./chrome_safari_devtools.md)** - Using Chrome/Safari DevTools to debug your app.
-* **[Android Modules: using local aar files](./android_modules_local_aar.md)** - How to use a local AAR file when creating an Android module.
-* **[Transfer your app from appc CLI to ti CLI](./appc_to_ti.md)** - Start use the open source CLI right away!
-* **[Appwrite + Appcelerator Titanium: A step by step guide](./appwrite_app.md)** - Connect an app with Appwrite.io
-* **[Android styling in Titanium using themes](./android_theming.md)** - Style your Android elements
+
+* **[Installation](https://fromzerotoapp.com/how-to-install-appcelerator-titanium/)** - How to install Appcelerator Titanium.
+* **[First app](https://fromzerotoapp.com/first-app/)** - Your first app!
+* **[Map project](https://fromzerotoapp.com/map-project/)** - Add a map with pins to your app.
+* **[Use the camera](https://fromzerotoapp.com/use-the-camera/)** - Record pictures and videos in your app.
+* **[Ah, push it](https://fromzerotoapp.com/ah-push-it-use-firebase-push-in-your-app/)** - Extend you app with Firebase push notifications.
+* **[Where am I?](https://fromzerotoapp.com/where-am-i-a-geolcation-gps-project/)** - Use geolocation services in your app.
+* **[Debugging WebViews](https://fromzerotoapp.com/debugging-webviews/)** - Debugging WebViews: see what's inside the WebView.
+* **[Basic App UIs](https://fromzerotoapp.com/basic-app-ui-layouts/)** - Basic App UIs: from a basic window to complex native tab group.
+* **[Android Adaptive icons](https://fromzerotoapp.com/android-adaptive-icons/)** - Android Adaptive Icons.
+* **[Debugging using Chrome/Safari DevTools](https://fromzerotoapp.com/debugging-apps-using-chrome-devtools/)** - Using Chrome/Safari DevTools to debug your app.
+* **[Android Modules: using local aar files](https://fromzerotoapp.com/android-modules-using-local-aar-files/)** - How to use a local AAR file when creating an Android module.
+* **[Transfer your app from appc CLI to ti CLI](https://fromzerotoapp.com/transfer-your-app-from-appc-cli-to-ti-cli/)** - Start use the open source CLI right away!
+* **[Appwrite + Appcelerator Titanium: A step by step guide](https://fromzerotoapp.com/appwrite-appcelerator-titanium-a-step-by-step-guide/)** - Connect an app with Appwrite.io
+* **[Android styling in Titanium using themes](https://fromzerotoapp.com/android-styling-in-titanium-using-themes/)** - Style your Android elements
+
+visit https://fromzerotoapp.com/tutorials/ for more tutorials.
 
 ## External Tutorials
 
